@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# Streamlit cache
+.streamlit/
+
+# Database & artifacts
+workspace/databases/
+workspace/artifacts/
+workspace/logs/
+workspace/meetings/
+data/
+*.db
+
+# Secret keys
+*.key
+*.pem 
