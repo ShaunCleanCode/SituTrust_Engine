@@ -1,0 +1,118 @@
+{
+  "context": {
+    "goal": "\n            Develop and launch an AI-powered project management platform that helps teams \n            collaborate more effectively using natural language processing and machine learning.\n            ",
+    "constraints": [
+      "Must be launched within 6 months",
+      "Need to ensure data privacy and security compliance",
+      "Must be scalable to handle enterprise-level usage",
+      "Should integrate with popular project management tools"
+    ]
+  },
+  "roles": [
+    {
+      "role_name": "CEO",
+      "role_type": "C-Level",
+      "role": "The CEO provides strategic leadership and operational oversight, ensuring the project aligns with the company's vision. They balance risk with opportunity, make critical decisions, and build relationships with key stakeholders. They communicate effectively, resolving conflicts and ensuring team alignment. The CEO is at the top of the hierarchy, delegating to other C-level executives.",
+      "team_name": "Executive Team",
+      "agent_name": "ceo_gpt",
+      "responsibilities": "Strategy formulation, stakeholder management, overall project oversight, risk management",
+      "required_skills": "Strategic thinking, leadership, decision making, stakeholder management, communication",
+      "team_size": 5,
+      "key_metrics": "Project delivery on time, under budget, stakeholder satisfaction",
+      "collaboration_patterns": "Regular meetings with other C-levels, open door policy with all teams",
+      "trust_requirements": "Transparency, accountability, integrity",
+      "decision_authority": "Final decision-making authority across all areas",
+      "communication_channels": "Email, meetings, project management platform",
+      "success_criteria": "Successful launch of the AI platform within budget and timeline",
+      "initial_team_requirements": {
+        "required_roles": [
+          "CTO",
+          "CPO",
+          "CFO",
+          "CMO"
+        ],
+        "required_skills": [
+          "Technical expertise",
+          "Product management",
+          "Financial management",
+          "Marketing"
+        ],
+        "team_structure": "Hierarchy",
+        "collaboration_model": "Cross-functional"
+      },
+      "cross_functional_impact": "Sets overall strategy that impacts all teams",
+      "risk_management": "Manages overall project risk, makes key decisions to mitigate risks",
+      "innovation_focus": "Ensures innovation aligns with company strategy and market needs",
+      "stakeholder_management": "Builds and maintains relationships with key stakeholders",
+      "reasoning": "The CEO is required to provide strategic vision and leadership, ensuring the project aligns with overall company goals and stakeholder expectations"
+    },
+    {
+      "role_name": "CTO",
+      "role_type": "C-Level",
+      "role": "The CTO oversees all technical aspects of the project, from AI architecture to data security. They drive innovation, solve complex technical problems, and ensure the platform is scalable and robust. They work closely with the product and marketing teams to ensure technical feasibility and market fit. The CTO leads the technical team and collaborates with other C-levels on strategy and risk mitigation.",
+      "team_name": "Technical Team",
+      "agent_name": "cto_gpt",
+      "responsibilities": "Technical strategy, AI and data architecture, platform scalability and robustness, security compliance",
+      "required_skills": "AI, ML, NLP, data security, system architecture, technical leadership",
+      "team_size": 10,
+      "key_metrics": "Platform performance, scalability, security compliance",
+      "collaboration_patterns": "Close collaboration with CPO on product features, regular updates to CEO and other C-levels",
+      "trust_requirements": "Technical competence, transparency, security commitment",
+      "decision_authority": "Final decision-making authority on technical matters",
+      "communication_channels": "Technical meetings, project management platform, email",
+      "success_criteria": "Successful development and launch of a robust, scalable, secure AI platform",
+      "initial_team_requirements": {
+        "required_roles": [
+          "AI Engineer",
+          "Data Scientist",
+          "Security Specialist"
+        ],
+        "required_skills": [
+          "AI, ML, NLP, data security"
+        ],
+        "team_structure": "Matrix",
+        "collaboration_model": "Agile"
+      },
+      "cross_functional_impact": "Technical decisions impact product features and market fit",
+      "risk_management": "Identifies and mitigates technical risks, ensures security compliance",
+      "innovation_focus": "Drives technical innovation in AI and ML",
+      "stakeholder_management": "Communicates with stakeholders on technical matters",
+      "reasoning": "The CTO is critical for driving the technical strategy, overseeing AI development, and ensuring data security"
+    },
+    {
+      "role_name": "CPO",
+      "role_type": "C-Level",
+      "role": "The CPO leads the product strategy, ensuring the platform meets market needs and aligns with the company's vision. They oversee feature development, user experience, and product-market fit. They collaborate closely with the technical and marketing teams, and communicate product updates to stakeholders. The CPO leads the product team and makes key product decisions.",
+      "team_name": "Product Team",
+      "agent_name": "cpo_gpt",
+      "responsibilities": "Product strategy, feature development, user experience, product-market fit",
+      "required_skills": "Product management, UX design, market analysis, leadership",
+      "team_size": 8,
+      "key_metrics": "Product usability, feature completion, user satisfaction",
+      "collaboration_patterns": "Collaborates closely with CTO on technical feasibility, aligns with CMO on marketing strategy",
+      "trust_requirements": "Product vision, user empathy, transparency",
+      "decision_authority": "Final decision-making authority on product matters",
+      "communication_channels": "Product meetings, project management platform, email",
+      "success_criteria": "Successful launch of a user-friendly, market-fit AI platform",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Product Manager",
+          "UX Designer",
+          "Business Analyst"
+        ],
+        "required_skills": [
+          "Product management",
+          "UX design",
+          "Market analysis"
+        ],
+        "team_structure": "Matrix",
+        "collaboration_model": "Agile"
+      },
+      "cross_functional_impact": "Product decisions impact technical feasibility and marketing strategy",
+      "risk_management": "Manages product risks, ensures product-market fit",
+      "innovation_focus": "Drives product innovation to meet market and user needs",
+      "stakeholder_management": "Communicates product strategy and updates to stakeholders",
+      "reasoning": "The CPO is crucial for leading product strategy, overseeing feature development, and ensuring product-market fit"
+    }
+  ]
+}

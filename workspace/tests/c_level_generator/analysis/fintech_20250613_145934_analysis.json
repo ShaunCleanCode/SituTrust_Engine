@@ -1,0 +1,45 @@
+{
+  "total_roles": 2,
+  "role_types": {
+    "C-Level": 2
+  },
+  "team_distribution": {
+    "Executive Team": 1,
+    "Technical Team": 1
+  },
+  "responsibility_length": [
+    135,
+    98
+  ],
+  "skill_requirements": [
+    155,
+    101
+  ],
+  "trust_requirements": [
+    112,
+    87
+  ],
+  "cross_functional_impact": [
+    93,
+    98
+  ],
+  "risk_management": [
+    100,
+    68
+  ],
+  "innovation_focus": [
+    107,
+    79
+  ],
+  "stakeholder_management": [
+    96,
+    100
+  ],
+  "avg_responsibility_length": 116.5,
+  "avg_skill_requirements": 128.0,
+  "avg_trust_requirements": 99.5,
+  "avg_cross_functional_impact": 95.5,
+  "avg_risk_management": 84.0,
+  "avg_innovation_focus": 93.0,
+  "avg_stakeholder_management": 98.0
+}

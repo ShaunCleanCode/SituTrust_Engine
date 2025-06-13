@@ -1,0 +1,77 @@
+2025-06-13 16:43:26,088 - INFO - Test environment setup completed
+2025-06-13 16:43:26,088 - INFO - Starting tech startup collaboration test
+2025-06-13 16:43:26,088 - INFO - Generating C-Level roles...
+2025-06-13 16:44:32,504 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:44:32,522 - INFO - Generated 4 C-Level roles
+2025-06-13 16:44:32,523 - INFO - Saved c_level output to /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/c_level/tech_startup_20250613_164432.json
+2025-06-13 16:44:32,523 - INFO - Generating space prompt...
+2025-06-13 16:44:47,717 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:44:47,720 - INFO - Space prompt generated successfully
+2025-06-13 16:44:47,721 - INFO - Saved spatial output to /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/spatial/tech_startup_20250613_164447.json
+2025-06-13 16:44:47,721 - INFO - Generating trust matrix...
+2025-06-13 16:45:02,659 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:45:02,661 - INFO - Trust matrix generated successfully
+2025-06-13 16:45:02,662 - INFO - Saved trust output to /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/trust/tech_startup_20250613_164502.json
+2025-06-13 16:45:02,662 - INFO - Starting C-Level meeting simulation...
+2025-06-13 16:45:02,662 - INFO - Processing PHASE 1 – Problem Definition and Structural Analysis...
+2025-06-13 16:47:30,028 - INFO - Test environment setup completed
+2025-06-13 16:47:30,028 - INFO - Starting tech startup collaboration test
+2025-06-13 16:47:30,028 - INFO - Generating C-Level roles...
+2025-06-13 16:48:06,022 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:48:06,028 - INFO - Generated 4 C-Level roles
+2025-06-13 16:48:06,030 - INFO - Saved c_level output to /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/c_level/tech_startup_20250613_164806.json
+2025-06-13 16:48:06,030 - INFO - Generating space prompt...
+2025-06-13 16:48:24,035 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:48:24,038 - INFO - Space prompt generated successfully
+2025-06-13 16:48:24,040 - INFO - Saved spatial output to /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/spatial/tech_startup_20250613_164824.json
+2025-06-13 16:48:24,040 - INFO - Generating trust matrix...
+2025-06-13 16:48:53,367 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:48:53,368 - INFO - Trust matrix generated successfully
+2025-06-13 16:48:53,369 - INFO - Saved trust output to /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/trust/tech_startup_20250613_164853.json
+2025-06-13 16:48:53,369 - INFO - Starting C-Level meeting simulation...
+2025-06-13 16:48:53,369 - INFO - Processing PHASE 1 – Problem Definition and Structural Analysis...
+2025-06-13 16:49:21,880 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:49:21,884 - INFO - Completed PHASE 1 – Problem Definition and Structural Analysis
+2025-06-13 16:49:21,884 - INFO - Processing PHASE 2 – Role Allocation and Responsibility Assignment...
+2025-06-13 16:49:44,441 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:49:44,443 - INFO - Completed PHASE 2 – Role Allocation and Responsibility Assignment
+2025-06-13 16:49:44,443 - INFO - Processing PHASE 3 – Tactical Strategy Conference...
+2025-06-13 16:50:08,022 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:50:08,024 - INFO - Completed PHASE 3 – Tactical Strategy Conference
+2025-06-13 16:50:08,026 - INFO - Saved meeting output to /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/meeting/tech_startup_20250613_165008.json
+2025-06-13 16:50:08,026 - INFO - Starting expert agent generation...
+2025-06-13 16:50:08,026 - INFO - Generating expert agents for CTO's team
+2025-06-13 16:50:34,007 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:50:49,166 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:50:49,170 - INFO - Generated output for agent sys_architect_gpt
+2025-06-13 16:50:58,590 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:50:58,594 - INFO - Generated output for agent ai_specialist_gpt
+2025-06-13 16:51:06,284 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:51:06,289 - INFO - Generated output for agent data_scientist_gpt
+2025-06-13 16:51:06,289 - INFO - Generating expert agents for CPO's team
+2025-06-13 16:51:40,064 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:51:51,083 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:51:51,096 - INFO - Generated output for agent pm_gpt
+2025-06-13 16:52:00,058 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:52:00,062 - INFO - Generated output for agent pd_gpt
+2025-06-13 16:52:07,825 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:52:07,830 - INFO - Generated output for agent ba_gpt
+2025-06-13 16:52:07,831 - INFO - Generating expert agents for CIO's team
+2025-06-13 16:52:36,089 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:52:49,300 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:52:49,304 - INFO - Generated output for agent it_infra_gpt
+2025-06-13 16:52:56,203 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:52:56,216 - INFO - Generated output for agent data_sec_gpt
+2025-06-13 16:53:05,749 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:53:05,753 - INFO - Generated output for agent integrations_gpt
+2025-06-13 16:53:05,753 - INFO - Generating expert agents for CMO's team
+2025-06-13 16:53:26,983 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:53:36,716 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:53:36,720 - INFO - Generated output for agent market_analyst_gpt
+2025-06-13 16:53:54,022 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:53:54,034 - INFO - Generated output for agent marketing_strategist_gpt
+2025-06-13 16:54:04,560 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 16:54:04,565 - INFO - Generated output for agent content_creator_gpt
+2025-06-13 16:54:04,567 - INFO - Saved expert_agents output to /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/tech_startup_20250613_165404.json
+2025-06-13 16:54:04,567 - INFO - Test completed successfully!
+2025-06-13 16:54:04,567 - INFO - Results saved in: /Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration

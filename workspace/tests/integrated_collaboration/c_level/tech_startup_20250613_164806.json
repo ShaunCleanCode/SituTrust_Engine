@@ -1,0 +1,73 @@
+{
+  "context": {
+    "goal": "\n            Develop and launch an AI-powered project management platform that helps teams \n            collaborate more effectively using natural language processing and machine learning.\n            ",
+    "constraints": [
+      "Must be launched within 6 months",
+      "Need to ensure data privacy and security compliance",
+      "Must be scalable to handle enterprise-level usage",
+      "Should integrate with popular project management tools"
+    ]
+  },
+  "roles": [
+    {
+      "role_name": "CTO",
+      "role_type": "C-Level",
+      "team_name": "Technical Team",
+      "agent_name": "cto_gpt",
+      "responsibilities": "Oversee the development and launch of the AI platform, ensure data privacy and security compliance, and scalability",
+      "required_skills": "Technical leadership, AI expertise, project management, data privacy and security knowledge",
+      "team_size": 20,
+      "key_metrics": "Platform development progress, data security compliance, platform performance and scalability",
+      "collaboration_patterns": "Working closely with the CPO and CIO to align on platform features and integrations",
+      "trust_requirements": "High trust in technical decision-making and security compliance",
+      "decision_authority": "Full authority on technical decisions and security compliance",
+      "communication_channels": "Regular technical team meetings, C-level meetings, email, and collaboration tools",
+      "success_criteria": "Successful launch of AI platform within timeframe, no security breaches, effective platform scalability"
+    },
+    {
+      "role_name": "CPO",
+      "role_type": "C-Level",
+      "team_name": "Product Team",
+      "agent_name": "cpo_gpt",
+      "responsibilities": "Define product vision, align with customer needs, ensure integration with popular project management tools",
+      "required_skills": "Product management, customer research, project management, collaboration tools knowledge",
+      "team_size": 15,
+      "key_metrics": "Product development progress, customer satisfaction, integration success",
+      "collaboration_patterns": "Working closely with the CTO to align on technical feasibility and the CMO for market alignment",
+      "trust_requirements": "High trust in product decision-making and customer alignment",
+      "decision_authority": "Full authority on product decisions and customer alignment",
+      "communication_channels": "Regular product team meetings, C-level meetings, email, and collaboration tools",
+      "success_criteria": "Successful launch of product with desired features, high customer satisfaction, successful integrations"
+    },
+    {
+      "role_name": "CIO",
+      "role_type": "C-Level",
+      "team_name": "IT Team",
+      "agent_name": "cio_gpt",
+      "responsibilities": "Ensure IT infrastructure supports platform scalability and data security, manage integrations",
+      "required_skills": "IT management, data security, knowledge of project management tools and integrations",
+      "team_size": 10,
+      "key_metrics": "IT infrastructure readiness, data security compliance, integration success",
+      "collaboration_patterns": "Working closely with the CTO on infrastructure and security matters and the CPO on integrations",
+      "trust_requirements": "High trust in IT decision-making and security compliance",
+      "decision_authority": "Full authority on IT decisions and security compliance",
+      "communication_channels": "Regular IT team meetings, C-level meetings, email, and collaboration tools",
+      "success_criteria": "IT support for successful launch and scaling of the platform, no security breaches, successful integrations"
+    },
+    {
+      "role_name": "CMO",
+      "role_type": "C-Level",
+      "team_name": "Marketing Team",
+      "agent_name": "cmo_gpt",
+      "responsibilities": "Market research, product promotion, customer acquisition and retention",
+      "required_skills": "Marketing strategy, customer acquisition, market research",
+      "team_size": 10,
+      "key_metrics": "Customer acquisition and retention rates, marketing campaign success",
+      "collaboration_patterns": "Working closely with the CPO on product features and customer feedback",
+      "trust_requirements": "High trust in marketing decisions and customer acquisition strategies",
+      "decision_authority": "Full authority on marketing decisions and strategies",
+      "communication_channels": "Regular marketing team meetings, C-level meetings, email, and collaboration tools",
+      "success_criteria": "High customer acquisition and retention rates, successful marketing campaigns"
+    }
+  ]
+}

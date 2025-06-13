@@ -1,0 +1,14 @@
+{
+  "prompt": "You are entering the **AI Nexus Lab**, a futuristic collaborative hub designed to facilitate strategic planning, technical innovation, and product development.\n\n🚀 Layout\n• Location: 86th floor of the \"Skyward Incubator,\" with panoramic views of the Silicon Valley\n• Shape: Triangular space (≈200 m²) with three primary workstations at each corner, a central holographic planning table, and mobile smart boards for dynamic collaboration\n• Lighting: Bio-adaptive lighting system that adjusts to circadian rhythms + focused task lights for each workstation\n• Acoustics: Active noise cancellation system for individual focus, with the option for ambient soundscapes tailored to stimulate creative thinking\n\n🔬 Infrastructure\n1. **AI Nexus Console** – Central holographic planning table displaying real-time project updates, risk heatmaps, and stakeholder insights\n2. **StratoDesks** (3) – Personalized workstations equipped with immersive multi-display systems, AI-assisted project management tools, and secure data access controls\n3. **CollabSphere** – A digital 360° touch-screen wall for brainstorming, feature mapping, and UX prototyping; supports real-time multi-user collaboration\n4. **Project Quantum** – An AI-powered project management assistant providing predictive insights, task prioritization, and natural language interface for streamlined team communication\n5. **BroadShield** – A high-tech security compliance monitor ensuring platform robustness and data integrity in real-time.",
+  "participants": [
+    "ceo_gpt",
+    "cto_gpt",
+    "cpo_gpt"
+  ],
+  "tasks": [
+    "Strategy formulation, stakeholder management, overall project oversight, risk management",
+    "Technical strategy, AI and data architecture, platform scalability and robustness, security compliance",
+    "Product strategy, feature development, user experience, product-market fit"
+  ],
+  "mood": "High trust, strategic collaboration, rapid iteration"
+}

@@ -1,0 +1,12 @@
+{
+  "prompt": "You are entering the **AI Nexus Boardroom**, a high-tech command center for strategic decision-making and seamless team collaboration.\n\n🖥  Layout  \n•  Location : 42nd floor of \"Project Plaza,\" with a panoramic view of Silicon Valley  \n•  Shape    : Circular room (≈80 m²) with dual workstations and a multi-touch interactive table at the center  \n•  Lighting : Dynamic LED light system (auto-adapts to time of day) + focus-enhancing desk lamps  \n•  Acoustics : −40 dB soundproofing, ambient background noise at 300 Hz for optimal concentration       \n\n🛠  Infrastructure  \n1. **AI Strategy Table** – 360° holographic display of project timelines, risk maps, stakeholder feedback, and real-time progress charts  \n2. **Nexus Workstations** (2) – 55\" curved monitors, AI-assisted keyboards, and one-click environment setup buttons  \n3. **Collaboration Wall** – interactive digital board for brainstorming, decision mapping, and instant cross-team communication; supports concurrent multi-cursor  \n4. **NLP Feedback Loop** – real-time transcription and semantic analysis of meeting discussions, highlighting key decisions, action items, and follow-ups.",
+  "participants": [
+    "ceo_gpt",
+    "cto_gpt"
+  ],
+  "tasks": [
+    "Setting strategic direction, making key decisions, managing stakeholders, ensuring alignment across teams.",
+    "Setting technological direction, making key technical decisions, ensuring technical compliance, managing technical team."
+  ],
+  "mood": "High trust, strategic collaboration, rapid iteration"
+}

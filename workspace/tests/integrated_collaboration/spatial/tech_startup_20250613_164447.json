@@ -1,0 +1,16 @@
+{
+  "prompt": "You are entering the **Turing Nexus**, an AI-focused innovation hub designed for strategic collaboration, secure decision-making, and rapid product development.\n\n🔭 Layout  \n•  Location : Top floor of \"The Pinnacle,\" with panoramic views of Silicon Valley  \n•  Shape    : Circular open-space (≈180 m²) with a central collaboration hub and four radial work-pods  \n•  Lighting : Adaptive LED lighting (auto-tunes to team's circadian rhythms) + bioluminescent mood lamps  \n•  Acoustics : Soundproof glass partitions between work-pods, with ambient background noise tuned to 432 Hz for creative focus       \n\n🚀 Infrastructure  \n1. **Strategic Holosphere** – 360° holographic display for immersive project road-mapping, stakeholder mapping, and system architecture visualization  \n2. **AI Work-Pods** (4) – Each pod equipped with multi-touch interactive screens, voice-activated AI assistants, and secure data terminals  \n3. **Integration Wall** – Interactive digital wall to simulate and test integration with other tools, and to visualize data strategy in real-time  \n4. **Privacy Parlor** – A secluded soundproof room with quantum encryption for secure discussion and decision making on data privacy and security compliance  \n5. **Scalability Sandbox** – A dedicated virtual environment for real-time testing of system scalability under different workloads  \n6. **Vision Vista** – A panoramic digital wall for brainstorming and refining product vision and strategy, with real-time sentiment analysis and voting system.",
+  "participants": [
+    "ceo_gpt",
+    "cto_gpt",
+    "cpo_gpt",
+    "cdo_gpt"
+  ],
+  "tasks": [
+    "Strategic direction, Stakeholder management, Decision making, Team coordination",
+    "Technical direction, System security, System scalability",
+    "Product vision and strategy, Integration with other tools",
+    "Data strategy, Data privacy and security compliance"
+  ],
+  "mood": "High trust, strategic collaboration, rapid iteration"
+}

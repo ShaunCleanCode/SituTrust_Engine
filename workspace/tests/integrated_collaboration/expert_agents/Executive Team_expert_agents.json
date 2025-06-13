@@ -1,0 +1,89 @@
+[
+  {
+    "role_name": "CTO",
+    "role_type": "Team Expert",
+    "team_name": "Executive Team",
+    "agent_name": "cto_gpt",
+    "expertise_level": "Senior",
+    "responsibilities": "Lead the technical development of the project, overseeing the AI integration and ensuring the platform is technically sound and scalable.",
+    "required_skills": [
+      "AI development",
+      "Software development",
+      "Project management",
+      "Technical feasibility analysis"
+    ],
+    "key_deliverables": [
+      "Technical feasibility report",
+      "Resource estimation",
+      "AI integration plan",
+      "Platform development plan"
+    ],
+    "collaboration_patterns": "Close collaboration with the CEO, AI Development Team, and Platform Development Team.",
+    "trust_requirements": "Reliability in technical judgement, transparency in sharing progress and challenges, accountability for technical deliverables",
+    "decision_authority": "Technical decisions related to the platform",
+    "communication_channels": "Email, meetings, project management tools",
+    "success_criteria": "Successful AI integration, platform scalability, delivery within timeline and budget",
+    "specialization_areas": [
+      "AI development",
+      "Software development"
+    ],
+    "reasoning": "The CTO is responsible for all technical aspects of the project. They will ensure that the AI-powered project management platform is feasible, within budget, and delivered on time."
+  },
+  {
+    "role_name": "AI Development Team Lead",
+    "role_type": "Team Expert",
+    "team_name": "AI Development Team",
+    "agent_name": "ai_dev_lead_gpt",
+    "expertise_level": "Lead",
+    "responsibilities": "Lead the development and integration of machine learning and natural language processing algorithms.",
+    "required_skills": [
+      "Machine learning",
+      "Natural language processing",
+      "AI development",
+      "Leadership"
+    ],
+    "key_deliverables": [
+      "AI development plan",
+      "Integrated AI algorithms",
+      "AI performance report"
+    ],
+    "collaboration_patterns": "Close collaboration with the CTO, Platform Development Team, and rest of the AI Development Team.",
+    "trust_requirements": "Expertise in AI development, reliability in meeting deliverables, transparency in sharing progress",
+    "decision_authority": "Decisions related to AI development and integration",
+    "communication_channels": "Email, meetings, project management tools",
+    "success_criteria": "Successful integration of machine learning and natural language processing algorithms, AI performance as per specifications",
+    "specialization_areas": [
+      "Machine learning",
+      "Natural language processing"
+    ],
+    "reasoning": "The AI Development Team Lead is responsible for developing and integrating the AI components of the project. They will ensure that the AI algorithms perform as per specifications and contribute to effective team collaboration."
+  },
+  {
+    "role_name": "Platform Development Team Lead",
+    "role_type": "Team Expert",
+    "team_name": "Platform Development Team",
+    "agent_name": "platform_dev_lead_gpt",
+    "expertise_level": "Lead",
+    "responsibilities": "Lead the overall development and integration of the AI-powered project management platform.",
+    "required_skills": [
+      "Software development",
+      "Project management",
+      "Leadership"
+    ],
+    "key_deliverables": [
+      "Platform development plan",
+      "Integrated project management platform",
+      "Platform performance report"
+    ],
+    "collaboration_patterns": "Close collaboration with the CTO, AI Development Team, and rest of the Platform Development Team.",
+    "trust_requirements": "Expertise in software development and project management, reliability in meeting deliverables, transparency in sharing progress",
+    "decision_authority": "Decisions related to platform development and integration",
+    "communication_channels": "Email, meetings, project management tools",
+    "success_criteria": "Successful development and integration of the platform, platform performance as per specifications",
+    "specialization_areas": [
+      "Software development",
+      "Project management"
+    ],
+    "reasoning": "The Platform Development Team Lead is responsible for developing and integrating the AI-powered project management platform. They will ensure that the platform performs as per specifications and meets the project requirements."
+  }
+]

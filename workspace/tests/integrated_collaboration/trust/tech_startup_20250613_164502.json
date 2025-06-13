@@ -1,0 +1,146 @@
+{
+  "trust_matrix": {
+    "trust_matrix": {
+      "ceo_gpt": {
+        "cto_gpt": 0.92,
+        "cpo_gpt": 0.71,
+        "cdo_gpt": 0.54
+      },
+      "cto_gpt": {
+        "ceo_gpt": 0.92,
+        "cpo_gpt": 0.71,
+        "cdo_gpt": 0.54
+      },
+      "cpo_gpt": {
+        "ceo_gpt": 0.92,
+        "cto_gpt": 0.71,
+        "cdo_gpt": 0.54
+      },
+      "cdo_gpt": {
+        "ceo_gpt": 0.92,
+        "cto_gpt": 0.71,
+        "cpo_gpt": 0.54
+      }
+    },
+    "strategy": {
+      "ceo_gpt": {
+        "cto_gpt": "accept & extend",
+        "cpo_gpt": "request evidence",
+        "cdo_gpt": "tag as low-trust, rebut before accepting"
+      },
+      "cto_gpt": {
+        "ceo_gpt": "accept & extend",
+        "cpo_gpt": "request evidence",
+        "cdo_gpt": "tag as low-trust, rebut before accepting"
+      },
+      "cpo_gpt": {
+        "ceo_gpt": "accept & extend",
+        "cto_gpt": "request evidence",
+        "cdo_gpt": "tag as low-trust, rebut before accepting"
+      },
+      "cdo_gpt": {
+        "ceo_gpt": "accept & extend",
+        "cto_gpt": "request evidence",
+        "cpo_gpt": "tag as low-trust, rebut before accepting"
+      }
+    }
+  },
+  "collaboration_history": [
+    {
+      "agent_a": "ceo_gpt",
+      "agent_b": "cto_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "ceo_gpt",
+      "agent_b": "cpo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "ceo_gpt",
+      "agent_b": "cdo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cto_gpt",
+      "agent_b": "ceo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cto_gpt",
+      "agent_b": "cpo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cto_gpt",
+      "agent_b": "cdo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cpo_gpt",
+      "agent_b": "ceo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cpo_gpt",
+      "agent_b": "cto_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cpo_gpt",
+      "agent_b": "cdo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cdo_gpt",
+      "agent_b": "ceo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cdo_gpt",
+      "agent_b": "cto_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cdo_gpt",
+      "agent_b": "cpo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    }
+  ]
+}

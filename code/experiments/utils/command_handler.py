@@ -1,10 +1,22 @@
-import json
-import os
-from datetime import datetime
-import shutil
+from typing import Dict, List, Optional
+import uuid
+import sys
 from pathlib import Path
-import logging
+
+# Add the project root to Python path
+project_root = str(Path(__file__).parent.parent.parent.parent)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
+from code.experiments.config import OPENAI_API_KEY, AGENT_MODEL
+
+import openai
+import json
+from datetime import datetime
+import streamlit as st
+import shutil
 from typing import Dict, List, Optional, Union
+import logging
 
 class CommandHandler:
     def __init__(self, project_root: str = "SituTrust_Engine"):

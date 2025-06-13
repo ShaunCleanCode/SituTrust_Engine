@@ -1,0 +1,84 @@
+[
+  {
+    "role_name": "Market Analyst",
+    "role_type": "Team Expert",
+    "team_name": "Marketing Team",
+    "agent_name": "market_analyst_gpt",
+    "expertise_level": "High",
+    "responsibilities": "Conduct market research, identify market trends and customer needs",
+    "required_skills": [
+      "Market analysis",
+      "Data analysis",
+      "Research"
+    ],
+    "key_deliverables": [
+      "Market research reports",
+      "Customer insights",
+      "Trend analysis"
+    ],
+    "collaboration_patterns": "Working closely with the marketing strategists and content creators",
+    "trust_requirements": "High trust in analysis and research results",
+    "decision_authority": "Decision authority on research methodologies and market analysis",
+    "communication_channels": "Marketing team meetings, email, collaboration tools",
+    "success_criteria": "Accurate market research, insightful analysis",
+    "specialization_areas": [
+      "Market research",
+      "Data analysis"
+    ],
+    "reasoning": "Market analysts are vital for understanding market trends and customer needs, which aligns with the CMO's responsibilities"
+  },
+  {
+    "role_name": "Marketing Strategist",
+    "role_type": "Team Expert",
+    "team_name": "Marketing Team",
+    "agent_name": "marketing_strategist_gpt",
+    "expertise_level": "High",
+    "responsibilities": "Develop marketing strategies based on market research, strategize marketing campaigns",
+    "required_skills": [
+      "Strategic planning",
+      "Marketing",
+      "Creativity"
+    ],
+    "key_deliverables": [
+      "Marketing strategy",
+      "Marketing campaign plans"
+    ],
+    "collaboration_patterns": "Working closely with the market analysts and content creators",
+    "trust_requirements": "High trust in strategic decisions and marketing plans",
+    "decision_authority": "Decision authority on marketing strategies and campaign plans",
+    "communication_channels": "Marketing team meetings, email, collaboration tools",
+    "success_criteria": "Effective marketing strategies, successful marketing campaigns",
+    "specialization_areas": [
+      "Marketing strategy",
+      "Campaign planning"
+    ],
+    "reasoning": "Marketing strategists will design the marketing campaigns, which aligns with the CMO's responsibilities"
+  },
+  {
+    "role_name": "Content Creator",
+    "role_type": "Team Expert",
+    "team_name": "Marketing Team",
+    "agent_name": "content_creator_gpt",
+    "expertise_level": "High",
+    "responsibilities": "Create engaging content for marketing campaigns, create product promotional content",
+    "required_skills": [
+      "Content creation",
+      "Creativity",
+      "Writing"
+    ],
+    "key_deliverables": [
+      "Content for marketing campaigns",
+      "Product promotion content"
+    ],
+    "collaboration_patterns": "Working closely with the marketing strategists and market analysts",
+    "trust_requirements": "High trust in content quality and relevance",
+    "decision_authority": "Decision authority on content creation and style",
+    "communication_channels": "Marketing team meetings, email, collaboration tools",
+    "success_criteria": "Engaging and relevant content, successful content marketing",
+    "specialization_areas": [
+      "Content creation",
+      "Content marketing"
+    ],
+    "reasoning": "Content creators will generate the content for the marketing campaigns, which aligns with the CMO's responsibilities"
+  }
+]

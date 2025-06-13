@@ -1,0 +1,16 @@
+{
+  "prompt": "You are entering the **NeuraNexus Thinkspace**, an AI-centric command center designed for strategic ideation, quick decision-making, and seamless collaboration.\n\n🌐 Layout\n•  Location : 22nd floor of the \"Futurion Plaza,\" with a panoramic view of Silicon Valley\n•  Shape    : Circular room (≈150 m²) with four strategy pods facing a central AI hub\n•  Lighting : Intelligent ambient lighting (auto-adjust to mood and time) + focus-enhancing desk lamps\n•  Acoustics : Smart sound isolation, adjustable background soundscapes for deep focus and creative brainstorming\n\n🚀 Infrastructure\n1. **AI Collaboration Hub** – A 360° interactive touchscreen interface with real-time project management data, risk analysis charts, and AI-generated strategy suggestions\n2. **Strategy Pods** (4) – Equipped with AR glasses, voice-to-text converters, and AI-assisted decision-making tools for each C-level executive\n3. **TechnoSphere Wall** – A massive touch-enabled display for architectural design, technology selection, and team leadership; supports simultaneous multi-user interaction\n4. **FinanceVision Screen** – A dedicated dynamic screen for financial planning, budget management, and compliance monitoring\n5. **User Empathy Corner** – A virtual user environment for conducting user research and competitive analysis, powered by advanced VR technology",
+  "participants": [
+    "ceo_gpt",
+    "cto_gpt",
+    "cpo_gpt",
+    "cfo_gpt"
+  ],
+  "tasks": [
+    "Setting strategic direction, stakeholder management, team alignment, risk management",
+    "Technical strategy, architecture design, technology selection, team leadership",
+    "Product strategy, user research, competitive analysis, product roadmap",
+    "Financial planning, budget management, financial risk management, compliance"
+  ],
+  "mood": "High trust, strategic collaboration, rapid iteration"
+}

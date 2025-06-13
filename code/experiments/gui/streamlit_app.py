@@ -386,7 +386,7 @@ class CollaborationGUI:
 
     def run(self):
         """Run the Streamlit application."""
-        st.title("AI Collaboration System")
+        st.title("🤖 SituTrust Engine: Multi AI Agent System in trust and space")
         
         # Display any error messages
         self._display_errors()
@@ -396,17 +396,16 @@ class CollaborationGUI:
             goal = st.text_area("Meeting Goal", height=100)
             constraints = st.text_area("Meeting Constraints", height=100)
             
-            if st.button("Generate Roles"):
-                st.write("[DEBUG] Generate Roles 버튼 클릭됨")
+            if st.button("Generate C-Level executive roles"):
+                st.write("Generate Roles button clicked")
                 if not goal or not constraints:
                     st.error("Please provide both goal and constraints")
                     self._add_error("Please provide both goal and constraints")
                     return
-                with st.spinner("Generating roles..."):
+                with st.spinner("🔧 Generating C-Level executive roles for this project…"):
                     try:
-                        st.write("[DEBUG] generate_roles 호출 전")
                         roles = self.role_generator.generate_c_level_roles(goal, constraints)
-                        st.write("[DEBUG] generate_roles 호출 후", roles)
+                        st.write(" generate C-Level roles called", roles)
                         if roles:
                             st.session_state.current_meeting = {
                                 'goal': goal,
@@ -446,13 +445,13 @@ class CollaborationGUI:
             - Start Time: {st.session_state.current_meeting['start_time']}
             """)
             # Display roles structure for debugging
-            st.markdown("#### [DEBUG] Roles Structure")
+            st.markdown("#### 🚀 C-Level Executives Have Joined the Mission")
             st.json(st.session_state.current_meeting['roles'])
             
             # C-Level Meeting Section
             st.subheader("C-Level Meeting")
             if st.button("Start C-Level Meeting"):
-                with st.spinner("Generating space prompt and trust matrix for C-Level meeting..."):
+                with st.spinner("🛬 C-Level executives are gathering from across the world, entering the conference space to kick off the project. ."):
                     try:
                         roles = st.session_state.current_meeting['roles']
                         c_level_roles = self._get_c_level_roles(roles)
@@ -472,50 +471,165 @@ class CollaborationGUI:
                         for i, a in enumerate(c_level_roles):
                             for j, b in enumerate(c_level_roles):
                                 if i != j:
+                                    # Calculate trust score based on role attributes
+                                    trust_score = 0.0
+                                    
+                                    # Communication compatibility (30%)
+                                    a_comm = set(a['communication_channels'].lower().split(','))
+                                    b_comm = set(b['communication_channels'].lower().split(','))
+                                    comm_compat = len(a_comm.intersection(b_comm)) / len(a_comm.union(b_comm))
+                                    trust_score += comm_compat * 0.3
+                                    
+                                    # Collaboration patterns (30%)
+                                    a_collab = set(a['collaboration_patterns'].lower().split(','))
+                                    b_collab = set(b['collaboration_patterns'].lower().split(','))
+                                    collab_compat = len(a_collab.intersection(b_collab)) / len(a_collab.union(b_collab))
+                                    trust_score += collab_compat * 0.3
+                                    
+                                    # Cross-functional impact (20%)
+                                    a_impact = set(a['cross_functional_impact'].lower().split(','))
+                                    b_impact = set(b['cross_functional_impact'].lower().split(','))
+                                    impact_align = len(a_impact.intersection(b_impact)) / len(a_impact.union(b_impact))
+                                    trust_score += impact_align * 0.2
+                                    
+                                    # Trust requirements (20%)
+                                    a_trust = set(a['trust_requirements'].lower().split(','))
+                                    b_trust = set(b['trust_requirements'].lower().split(','))
+                                    trust_align = len(a_trust.intersection(b_trust)) / len(a_trust.union(b_trust))
+                                    trust_score += trust_align * 0.2
+                                    
                                     collaboration_history.append({
                                         'agent_a': a['agent_name'],
                                         'agent_b': b['agent_name'],
-                                        'history': 2,  # e.g., 2 past collaborations
-                                        'success_rate': 0.8,
-                                        'comm_compat': 0.9,
-                                        'domain_align': 0.85
+                                        'trust_score': round(trust_score, 2),
+                                        'comm_compat': round(comm_compat, 2),
+                                        'collab_compat': round(collab_compat, 2),
+                                        'impact_align': round(impact_align, 2),
+                                        'trust_align': round(trust_align, 2)
                                     })
+                        
                         trust_data = self.trust_functions.generate_prompt_based_trust_matrix(c_level_roles, collaboration_history)
                         st.markdown("#### 🤝 C-Level Trust Matrix & Strategy")
-                        st.json(trust_data)
-                        # Log C-Level roles for debugging
-                        st.markdown("#### [DEBUG] C-Level Roles")
-                        st.json(c_level_roles)
+                        
+                        # Trust Matrix Formula Explanation
+                        st.markdown("""
+                        ##### 📊 Trust Score Calculation Formula
+                        ```python
+                        T_ij = σ(w₁·c_ij + w₂·p_ij + w₃·i_ij + w₄·t_ij)
+                        
+                        where:
+                        - c_ij = Communication compatibility (30%)
+                        - p_ij = Collaboration patterns (30%)
+                        - i_ij = Cross-functional impact (20%)
+                        - t_ij = Trust requirements (20%)
+                        - σ = Sigmoid function for normalization
+                        ```
+                        """)
+                        
+                        # Trust Score Mapping
+                        st.markdown("""
+                        ##### 🎯 Trust Score to Behavior Mapping
+                        | Trust Score Range | Behavior | UI Color |
+                        |------------------|----------|----------|
+                        | ≥ 0.85 | Accept & build on the idea | 🟢 Green |
+                        | 0.65 - 0.84 | Ask for justification | 🟡 Yellow |
+                        | < 0.65 | Rebut or defer | 🔴 Red |
+                        """)
+                        
+                        # Display Trust Matrix with Color Coding
+                        st.markdown("##### 🔄 Trust Matrix Visualization")
+                        trust_matrix = trust_data.get('trust_matrix', {})
+                        strategy = trust_data.get('strategy', {})
+                        
+                        # Create a DataFrame for better visualization
+                        trust_df = pd.DataFrame(trust_matrix).fillna(0)
+                        strategy_df = pd.DataFrame(strategy).fillna("")
+                        
+                        # Display trust matrix with color coding
+                        st.dataframe(
+                            trust_df.style.background_gradient(cmap='RdYlGn', vmin=0, vmax=1),
+                            use_container_width=True
+                        )
+                        
+                        # Display strategy matrix
+                        st.markdown("##### 🎭 Behavioral Strategy")
+                        st.dataframe(strategy_df, use_container_width=True)
+                        
+                        # Original JSON view (collapsed)
+                        with st.expander("View Raw Trust Data"):
+                            st.json(trust_data)
+                        
                         # 3. 3-Phase C-Level Meeting Simulation
                         phase_titles = [
-                            "PHASE 1 – 문제 정의 및 구조 분석",
-                            "PHASE 2 – 역할 분담 및 책임 설정",
-                            "PHASE 3 – 전술적 전략 회의"
+                            "PHASE 1 – Problem Definition and Structural Analysis",
+                            "PHASE 2 – Role Allocation and Responsibility Assignment",
+                            "PHASE 3 – Tactical Strategy Conference"
                         ]
                         phase_prompts = [
-                            "각 C-Level 역할이 자신의 관점에서 문제를 정의하고, 구조를 분석하며, 서로 토론/반론/합의를 진행한다. 신뢰도 기반으로 수용/반론/근거요구 등 행동을 결정한다.",
-                            "각 C-Level이 구체적인 역할 분담과 책임 설정을 논의한다. 각 팀/Agent의 역할과 책임, 협업 방식을 합의한다.",
-                            "전술적 전략(실행 전략, 일정, 최종 합의 등)을 논의하고, 최종 실행 방안을 도출한다."
-                        ]
+    "Each C-Level role defines the problem from their own perspective, analyzes the structure, and conducts one round each of discussion, rebuttal, and consensus. All responses and decisions—whether to accept, refute, or request justification—must be based on trust-weighted reasoning.",
+    
+    "Each C-Level discusses detailed role allocation and responsibility assignment. They must reach consensus on the responsibilities of each team and agent, including how collaboration will occur. Each leader must define the total number of members on their team and assign specific roles to individual agents.",
+    
+    "C-Levels engage in tactical strategy planning, including execution strategies, timelines, and final agreements. Each team must produce a detailed task line for their agents, specifying what each agent is responsible for and by when. The final outcome should be a consensus-driven execution plan across all teams."
+]
                         phase_logs = []
+                        trust_matrix_str = json.dumps(trust_data.get('trust_matrix', {}), ensure_ascii=False)
+                        strategy_str = json.dumps(trust_data.get('strategy', {}), ensure_ascii=False)
+                        
                         for idx, (title, prompt) in enumerate(zip(phase_titles, phase_prompts)):
                             st.markdown(f"### 🧠 {title}")
                             # Compose phase context
                             phase_context = f"""
-회의 목표: {goal}
-참가자: {', '.join(participants)}
-공간: {space_prompt}
-신뢰도 행렬: {json.dumps(trust_data.get('trust_matrix', {}), ensure_ascii=False)}
-행동전략: {json.dumps(trust_data.get('strategy', {}), ensure_ascii=False)}
+Meeting Objective: {goal}
+Participants: {', '.join(participants)}
+Environment: {space_prompt}
+Trust Matrix: {trust_matrix_str}
+Behavioral Strategy: {strategy_str}
 
 {prompt}
-각 역할별로 실제 대화체로 2~3턴씩 주고받으며, 신뢰도 기반 행동(수용/반론/근거요구 등)을 명확히 드러내고, 마지막엔 간략 요약을 붙여줘.
+
+Trust-based Response Guidelines:
+Each C-Level participant must:
+- Participate in *3 realistic, role-consistent dialogue turns*
+- Explicitly demonstrate **at least one** of the following trust-based behaviors:
+- ✅ Accept: Acknowledge and build upon another's point (if trust_score ≥ 0.85)
+- ❓ Justify: Request clarification or evidence before accepting (0.65 ≤ trust_score < 0.85)
+- ❌ Rebut: Disagree with reasoning or defer (if trust_score < 0.65)
+- Use terminology and perspective aligned with their defined *responsibilities* and *domain*
+- Refer to *trust dynamics* naturally in their speech (e.g., "Given our alignment on...", "I'm cautious because...")
+role_emojis_map = {{
+    "CEO": "🙋🏻‍♂️",
+    "cto_gpt": "💻",
+    "cfo_gpt": "😌",
+    "COO": "🧐",
+    "CMO": "😼",
+    "CHRO": "🧑🏼‍🦲",
+    "CIO": "🧔🏻‍♂️",
+    "CSO": "👨🏾‍🦳",
+    "CLO": "👩🏼‍🔧",
+    "CDO": "👨🏻‍💻"
+}}
+📝 **Expected Format**:
+- Use realistic conversation format:
+```markdown
+**emoji cto_gpt**: Here's my view based on our infrastructure plans...
+**emoji cpo_gpt**: I agree, especially because our trust level supports this coordination.
+```
 """
+                            
                             # Call GPT for phase dialogue
                             response = self.trust_functions.openai_client.chat.completions.create(
                                 model=AGENT_MODEL,
                                 messages=[
-                                    {"role": "system", "content": "You are a C-Level meeting simulator. Always respond in markdown, with dialogue and summary."},
+                                    {"role": "system", "content": """
+You are a C-Level AI Meeting Simulator trained in trust-aware collaboration. 
+You simulate high-level strategic meetings between executives using markdown formatting. 
+You must always:
+- Reflect each participant's domain knowledge, priorities, and role-specific language
+- Show realistic, human-like multi-turn dialogue
+- Demonstrate decisions that align with trust-based behavioral rules
+- End each meeting with a **clear markdown summary** that highlights alignment, conflicts, and next steps
+"""},
                                     {"role": "user", "content": phase_context}
                                 ],
                                 temperature=0.7
@@ -534,7 +648,7 @@ class CollaborationGUI:
                         })
                         # phase_logs를 session_state에 저장
                         st.session_state.phase_logs = phase_logs
-                        st.success("C-Level 3단계 회의가 완료되었습니다!")
+                        st.success("✅ Conference among C-Level Executives  successfully completed!")
                         
                         # 바로 에이전트 생성 시작
                         print("[DEBUG] Starting agent generation directly after C-Level meeting")
@@ -547,7 +661,13 @@ class CollaborationGUI:
                             st.write("[DEBUG] Completed retrieving roles")
 
                             st.write("[DEBUG] Starting to retrieve meeting decisions")
-                            meeting_decisions = st.session_state.get('phase_logs', [])
+                            meeting_decisions_raw = st.session_state.get('phase_logs', [])
+                        
+
+                            summarized_meetings = self.role_generator.summarize_meeting_logs_with_gpt(
+                                meeting_decisions_raw,
+                                model=AGENT_MODEL
+)
                             st.write("[DEBUG] Completed retrieving meeting decisions")
 
                             project_context = {
@@ -561,32 +681,71 @@ class CollaborationGUI:
                                 print(f"c_role: {c_role}")
                                 st.write(f"[DEBUG] Starting to generate expert agents for team {c_role['team_name']}")
                                 expert_agents = self.role_generator.generate_team_expert_agents(
-                                    c_role, meeting_decisions, project_context
+                                    c_role, summarized_meetings, project_context
                                 )
+                                st.write(f"[DEBUG] Completed generating expert agents for team {c_role['team_name']}")
                                 for agent in expert_agents or []:
-                                    task_prompt = f"You are {agent['agent_name']} ({agent['role_name']}) in {c_role['team_name']}. Your main responsibilities: {agent['responsibilities']}. Please generate a sample output for your main responsibility."
+                                    # Safely extract all fields as strings
+                                    agent_name = str(agent.get('agent_name', ''))
+                                    role_name = str(agent.get('role_name', ''))
+                                    expertise_level = str(agent.get('expertise_level', ''))
+                                    team_name = str(agent.get('team_name', ''))
+                                    role = str(agent.get('role', ''))
+                                    responsibilities = str(agent.get('responsibilities', ''))
+                                    required_skills = ', '.join(agent.get('required_skills', []))
+                                    key_deliverables = ', '.join(agent.get('key_deliverables', []))
+                                    collaboration_patterns = str(agent.get('collaboration_patterns', ''))
+                                    trust_requirements = str(agent.get('trust_requirements', ''))
+                                    decision_authority = str(agent.get('decision_authority', ''))
+                                    communication_channels = str(agent.get('communication_channels', ''))
+                                    success_criteria = str(agent.get('success_criteria', ''))
+                                    specialization_areas = ', '.join(agent.get('specialization_areas', []))
+                                    reasoning = str(agent.get('reasoning', ''))
+
+                                    full_prompt = (
+                                        f"You are **{agent_name}**, working as **{role_name}** (Expertise Level: {expertise_level}) on the **{team_name}**.\n"
+                                        f"Your detailed role:\n{role}\n"
+                                        f"### Responsibilities\n{responsibilities}\n"
+                                        f"### Required Skills\n{required_skills}\n"
+                                        f"### Key Deliverables\n{key_deliverables}\n"
+                                        f"### Collaboration Pattern\n{collaboration_patterns}\n"
+                                        f"### Trust Requirements\n{trust_requirements}\n"
+                                        f"### Decision Authority\n{decision_authority}\n"
+                                        f"### Communication Channels\n{communication_channels}\n"
+                                        f"### Success Criteria\n{success_criteria}\n"
+                                        f"### Specialization Areas\n{specialization_areas}\n"
+                                        f"### Reasoning\n{reasoning}\n"
+                                        "---🔧 **Task**: Based on the above, generate a realistic, high-quality sample output that demonstrates how you would execute your main deliverable(s) in this project context.\n\n"
+                                        "Your response should reflect your expertise level, adhere to your communication and collaboration protocols, and model trust-aware coordination."
+                                    )
                                     try:
-                                        st.write(f"[DEBUG] Starting task for agent {agent['agent_name']}")
+                                        st.write(f"[DEBUG] Starting task for agent {agent_name}")
                                         response = self.trust_functions.openai_client.chat.completions.create(
                                             model=AGENT_MODEL,
                                             messages=[
-                                                {"role": "system", "content": "You are an expert agent. Always respond with a relevant output for your role."},
-                                                {"role": "user", "content": task_prompt}
+                                                {
+                                                    "role": "system",
+                                                    "content": "You are an expert AI agent. Always produce outputs that reflect your defined role, expertise, and collaboration model."
+                                                },
+                                                {
+                                                    "role": "user",
+                                                    "content": full_prompt
+                                                }
                                             ],
                                             temperature=0.7
                                         )
                                         output = response.choices[0].message.content.strip()
-                                        st.write(f"[DEBUG] Completed task for agent {agent['agent_name']}")
+                                        st.write(f"[DEBUG] Completed task for agent {agent_name}")
                                     except Exception as e:
                                         output = f"[ERROR] {str(e)}"
-                                        st.error(f"Error occurred while generating agent {agent['agent_name']}: {str(e)}")
-                                    agent_dir = f"workspace/artifacts/{agent['agent_name']}"
+                                        st.error(f"Error occurred while generating agent {agent_name}: {str(e)}")
+                                    agent_dir = f"workspace/artifacts/{agent_name}"
                                     os.makedirs(agent_dir, exist_ok=True)
                                     output_path = os.path.join(agent_dir, f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_output.txt")
                                     with open(output_path, 'w', encoding='utf-8') as f:
                                         f.write(output)
                                     agent['artifact_path'] = output_path
-                                    agent_artifacts[agent['agent_name']] = output_path
+                                    agent_artifacts[agent_name] = output_path
                                 agent_results[c_role['team_name']] = expert_agents
                                 st.write(f"[DEBUG] Completed generating expert agents for team {c_role['team_name']}")
 
@@ -736,7 +895,7 @@ class CollaborationGUI:
             logs = st.session_state.current_meeting.get('logs', [])
             for log in logs:
                 if log.get('type') == 'c_level_meeting_phases':
-                    st.markdown("### C-Level 3단계 회의 로그")
+                    st.markdown("### C-Level 3step meeting log")
                     for phase in log.get('phases', []):
                         st.markdown(f"#### {phase['phase']}")
                         st.markdown(phase['dialogue'])
@@ -760,6 +919,7 @@ class CollaborationGUI:
         # (선택) session_state 전체를 디버깅용으로 표시
         with st.expander("[DEBUG] session_state 전체 보기"):
             st.json(dict(st.session_state))
+            
 
 if __name__ == "__main__":
     gui = CollaborationGUI()

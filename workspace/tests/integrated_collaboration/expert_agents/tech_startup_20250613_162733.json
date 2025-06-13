@@ -1,0 +1,192 @@
+{
+  "agent_results": {
+    "Executive Team": [
+      {
+        "role_name": "CTO",
+        "role_type": "Team Expert",
+        "team_name": "Executive Team",
+        "agent_name": "cto_gpt",
+        "expertise_level": "Senior",
+        "responsibilities": "Lead the technical development of the project, overseeing the AI integration and ensuring the platform is technically sound and scalable.",
+        "required_skills": [
+          "AI development",
+          "Software development",
+          "Project management",
+          "Technical feasibility analysis"
+        ],
+        "key_deliverables": [
+          "Technical feasibility report",
+          "Resource estimation",
+          "AI integration plan",
+          "Platform development plan"
+        ],
+        "collaboration_patterns": "Close collaboration with the CEO, AI Development Team, and Platform Development Team.",
+        "trust_requirements": "Reliability in technical judgement, transparency in sharing progress and challenges, accountability for technical deliverables",
+        "decision_authority": "Technical decisions related to the platform",
+        "communication_channels": "Email, meetings, project management tools",
+        "success_criteria": "Successful AI integration, platform scalability, delivery within timeline and budget",
+        "specialization_areas": [
+          "AI development",
+          "Software development"
+        ],
+        "reasoning": "The CTO is responsible for all technical aspects of the project. They will ensure that the AI-powered project management platform is feasible, within budget, and delivered on time.",
+        "artifact_path": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Executive Team/cto_gpt/20250613_162603_output.txt"
+      },
+      {
+        "role_name": "AI Development Team Lead",
+        "role_type": "Team Expert",
+        "team_name": "AI Development Team",
+        "agent_name": "ai_dev_lead_gpt",
+        "expertise_level": "Lead",
+        "responsibilities": "Lead the development and integration of machine learning and natural language processing algorithms.",
+        "required_skills": [
+          "Machine learning",
+          "Natural language processing",
+          "AI development",
+          "Leadership"
+        ],
+        "key_deliverables": [
+          "AI development plan",
+          "Integrated AI algorithms",
+          "AI performance report"
+        ],
+        "collaboration_patterns": "Close collaboration with the CTO, Platform Development Team, and rest of the AI Development Team.",
+        "trust_requirements": "Expertise in AI development, reliability in meeting deliverables, transparency in sharing progress",
+        "decision_authority": "Decisions related to AI development and integration",
+        "communication_channels": "Email, meetings, project management tools",
+        "success_criteria": "Successful integration of machine learning and natural language processing algorithms, AI performance as per specifications",
+        "specialization_areas": [
+          "Machine learning",
+          "Natural language processing"
+        ],
+        "reasoning": "The AI Development Team Lead is responsible for developing and integrating the AI components of the project. They will ensure that the AI algorithms perform as per specifications and contribute to effective team collaboration.",
+        "artifact_path": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Executive Team/ai_dev_lead_gpt/20250613_162615_output.txt"
+      },
+      {
+        "role_name": "Platform Development Team Lead",
+        "role_type": "Team Expert",
+        "team_name": "Platform Development Team",
+        "agent_name": "platform_dev_lead_gpt",
+        "expertise_level": "Lead",
+        "responsibilities": "Lead the overall development and integration of the AI-powered project management platform.",
+        "required_skills": [
+          "Software development",
+          "Project management",
+          "Leadership"
+        ],
+        "key_deliverables": [
+          "Platform development plan",
+          "Integrated project management platform",
+          "Platform performance report"
+        ],
+        "collaboration_patterns": "Close collaboration with the CTO, AI Development Team, and rest of the Platform Development Team.",
+        "trust_requirements": "Expertise in software development and project management, reliability in meeting deliverables, transparency in sharing progress",
+        "decision_authority": "Decisions related to platform development and integration",
+        "communication_channels": "Email, meetings, project management tools",
+        "success_criteria": "Successful development and integration of the platform, platform performance as per specifications",
+        "specialization_areas": [
+          "Software development",
+          "Project management"
+        ],
+        "reasoning": "The Platform Development Team Lead is responsible for developing and integrating the AI-powered project management platform. They will ensure that the platform performs as per specifications and meets the project requirements.",
+        "artifact_path": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Executive Team/platform_dev_lead_gpt/20250613_162624_output.txt"
+      }
+    ],
+    "Technical Team": [
+      {
+        "role_name": "Senior Software Engineer",
+        "role_type": "Team Expert",
+        "team_name": "Technical Team",
+        "agent_name": "senior_software_engineer_gpt",
+        "expertise_level": "Senior",
+        "responsibilities": "Design, build, and maintain efficient and reliable code. Work closely with the rest of the team to achieve project objectives.",
+        "required_skills": [
+          "Software Development",
+          "Coding languages",
+          "Debugging"
+        ],
+        "key_deliverables": [
+          "Efficient and maintainable code",
+          "Technical documentation"
+        ],
+        "collaboration_patterns": "Close collaboration with AI Specialists, Data Scientists, and other Software Engineers",
+        "trust_requirements": "Technical proficiency, reliability, ability to meet deadlines",
+        "decision_authority": "Responsible for making decisions regarding code design and implementation",
+        "communication_channels": "Email, project management tools, team meetings",
+        "success_criteria": "Delivery of well-structured, efficient, and maintainable code",
+        "specialization_areas": [
+          "Software Development",
+          "Coding languages"
+        ],
+        "reasoning": "A Senior Software Engineer is needed to lead the coding efforts, ensuring the platform is built with efficient and maintainable code.",
+        "artifact_path": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Technical Team/senior_software_engineer_gpt/20250613_162707_output.txt"
+      },
+      {
+        "role_name": "Data Scientist",
+        "role_type": "Team Expert",
+        "team_name": "Technical Team",
+        "agent_name": "data_scientist_gpt",
+        "expertise_level": "Senior",
+        "responsibilities": "Analyze large amounts of raw information to find patterns, build data products to extract valuable business insights, and identify trends and metrics.",
+        "required_skills": [
+          "Data Analysis",
+          "Machine Learning",
+          "Data Visualization"
+        ],
+        "key_deliverables": [
+          "Data reports",
+          "Insights for decision making"
+        ],
+        "collaboration_patterns": "Collaborate with AI Specialists and Software Engineers to implement machine learning models",
+        "trust_requirements": "Technical proficiency, reliability, analytical thinking",
+        "decision_authority": "Responsible for decisions regarding data analysis and insights extraction",
+        "communication_channels": "Email, project management tools, team meetings",
+        "success_criteria": "Delivery of accurate data reports and valuable business insights",
+        "specialization_areas": [
+          "Data Analysis",
+          "Machine Learning",
+          "Data Visualization"
+        ],
+        "reasoning": "A Data Scientist is essential for extracting valuable insights from the data, helping the team make informed decisions.",
+        "artifact_path": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Technical Team/data_scientist_gpt/20250613_162721_output.txt"
+      },
+      {
+        "role_name": "AI Specialist",
+        "role_type": "Team Expert",
+        "team_name": "Technical Team",
+        "agent_name": "ai_specialist_gpt",
+        "expertise_level": "Senior",
+        "responsibilities": "Develop machine learning models for the project, ensure AI reliability and performance, address AI ethical concerns.",
+        "required_skills": [
+          "Machine Learning",
+          "Natural Language Processing",
+          "AI Ethics"
+        ],
+        "key_deliverables": [
+          "Machine learning models",
+          "AI reliability reports"
+        ],
+        "collaboration_patterns": "Collaborate with Data Scientists for data analysis and Software Engineers for implementation",
+        "trust_requirements": "Technical proficiency, reliability, attention to AI ethics",
+        "decision_authority": "Makes decisions regarding AI development and ethical considerations",
+        "communication_channels": "Email, project management tools, team meetings",
+        "success_criteria": "Delivery of reliable and high-performing AI",
+        "specialization_areas": [
+          "Machine Learning",
+          "Natural Language Processing",
+          "AI Ethics"
+        ],
+        "reasoning": "An AI Specialist is required to ensure the successful development and ethical use of AI in the project.",
+        "artifact_path": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Technical Team/ai_specialist_gpt/20250613_162733_output.txt"
+      }
+    ]
+  },
+  "agent_artifacts": {
+    "cto_gpt": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Executive Team/cto_gpt/20250613_162603_output.txt",
+    "ai_dev_lead_gpt": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Executive Team/ai_dev_lead_gpt/20250613_162615_output.txt",
+    "platform_dev_lead_gpt": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Executive Team/platform_dev_lead_gpt/20250613_162624_output.txt",
+    "senior_software_engineer_gpt": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Technical Team/senior_software_engineer_gpt/20250613_162707_output.txt",
+    "data_scientist_gpt": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Technical Team/data_scientist_gpt/20250613_162721_output.txt",
+    "ai_specialist_gpt": "/Users/onseonghyeon/Desktop/SituTrust_Engine/workspace/tests/integrated_collaboration/expert_agents/Technical Team/ai_specialist_gpt/20250613_162733_output.txt"
+  }
+}

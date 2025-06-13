@@ -1,0 +1,85 @@
+{
+  "context": {
+    "goal": "\n            Develop and launch an AI-powered project management platform that helps teams \n            collaborate more effectively using natural language processing and machine learning.\n            ",
+    "constraints": [
+      "Must be launched within 6 months",
+      "Need to ensure data privacy and security compliance",
+      "Must be scalable to handle enterprise-level usage",
+      "Should integrate with popular project management tools"
+    ]
+  },
+  "roles": [
+    {
+      "role_name": "CEO",
+      "role_type": "C-Level",
+      "role": "The CEO will set the vision, strategy, and direction for the AI-powered project management platform. They will inspire and motivate the team by communicating a clear vision and aligning everyone's efforts. They will be responsible for making final decisions and ensuring the project stays on track and within budget. Their communication style should be open, transparent, and collaborative to foster trust across the team.",
+      "team_name": "Executive Team",
+      "agent_name": "ceo_gpt",
+      "responsibilities": "Setting vision and strategy, making final decisions, ensuring project is on track and within budget, managing stakeholders",
+      "required_skills": "Strategic thinking, decision-making, people management, communication, negotiation, stakeholder management",
+      "team_size": 4,
+      "key_metrics": "Project delivery within timeline and budget, stakeholder satisfaction, team performance",
+      "collaboration_patterns": "Regular meetings with C-level team, open communication with all teams, stakeholder engagement",
+      "trust_requirements": "Transparency, openness, accountability",
+      "decision_authority": "Final decision-making authority on all aspects of the project",
+      "communication_channels": "Email, meetings, project management tools",
+      "success_criteria": "Project completion within timeline and budget, team harmony, stakeholder satisfaction",
+      "initial_team_requirements": {
+        "required_roles": [
+          "CTO",
+          "CPO",
+          "CMO",
+          "CDO"
+        ],
+        "required_skills": [
+          "Technical knowledge",
+          "Project management",
+          "Marketing",
+          "Data privacy and security"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Collaborative decision-making"
+      },
+      "cross_functional_impact": "Sets the vision and strategy that all teams align with",
+      "risk_management": "Regular risk assessments, contingency planning, stakeholder management",
+      "innovation_focus": "Visionary leadership, strategic planning",
+      "stakeholder_management": "Regular communication, managing expectations, negotiation",
+      "reasoning": "The CEO is essential for setting the direction, making final decisions, and managing stakeholders. They will inspire and motivate the team, ensuring everyone is aligned with the vision and strategy."
+    },
+    {
+      "role_name": "CTO",
+      "role_type": "C-Level",
+      "role": "The CTO will be responsible for all technical aspects of the project. They will lead the technical team in developing the AI-powered project management platform, ensuring it is scalable and integrates with other tools. They will need to communicate effectively with the CEO and other C-level executives to align technical decisions with the overall strategy.",
+      "team_name": "Technical Team",
+      "agent_name": "cto_gpt",
+      "responsibilities": "Leading technical team, making technical decisions, ensuring scalability and integration",
+      "required_skills": "Technical expertise in AI, machine learning, and natural language processing, project management, communication",
+      "team_size": 10,
+      "key_metrics": "Quality of technical implementation, scalability, integration with other tools",
+      "collaboration_patterns": "Regular meetings with technical team and C-level team, open communication with all teams",
+      "trust_requirements": "Transparency, technical competence, accountability",
+      "decision_authority": "Final decision-making authority on all technical aspects of the project",
+      "communication_channels": "Email, meetings, project management tools",
+      "success_criteria": "Successful technical implementation of the platform, scalability, successful integration with other tools",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Software Engineers",
+          "Data Scientists",
+          "AI Specialists"
+        ],
+        "required_skills": [
+          "Software development",
+          "AI and machine learning",
+          "Natural language processing"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Collaborative decision-making"
+      },
+      "cross_functional_impact": "Leads the technical team and makes all technical decisions, impacting all aspects of the project",
+      "risk_management": "Regular risk assessments, contingency planning, technical problem solving",
+      "innovation_focus": "Technical innovation, AI and machine learning, natural language processing",
+      "stakeholder_management": "Regular communication with CEO and other C-level executives, managing technical expectations",
+      "reasoning": "The CTO is essential for leading the technical team and making all technical decisions. Their expertise in AI, machine learning, and natural language processing is crucial for the project's success."
+    }
+  ]
+}

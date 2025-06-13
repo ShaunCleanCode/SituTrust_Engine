@@ -1,0 +1,137 @@
+{
+  "prompt": "Goal: \n        Create a secure healthcare platform that connects patients with specialists,\n        manages medical records, and provides AI-powered health insights.\n        \nConstraints: ['Must comply with HIPAA and other healthcare regulations', 'Need to ensure patient data security', 'Must be accessible to patients with disabilities', 'Should integrate with existing healthcare systems']",
+  "response": [
+    {
+      "role_name": "CEO",
+      "role_type": "C-Level",
+      "team_name": "Executive Team",
+      "agent_name": "ceo_gpt",
+      "responsibilities": "Overall strategic direction, stakeholder management, aligning team vision and goals, ensuring regulatory compliance",
+      "required_skills": "Strategic thinking, leadership, decision-making, communication, financial acumen, healthcare industry knowledge",
+      "team_size": 1,
+      "key_metrics": "Return on investment, customer satisfaction, employee engagement, regulatory compliance",
+      "collaboration_patterns": "Interacts with all C-level executives, board of directors and key stakeholders",
+      "trust_requirements": "Transparency, honesty, accountability, integrity",
+      "decision_authority": "Has ultimate decision-making authority",
+      "communication_channels": "Board meetings, company-wide meetings, one-on-one meetings with direct reports",
+      "success_criteria": "Achievement of strategic goals, financial performance, regulatory compliance",
+      "initial_team_requirements": {
+        "required_roles": [
+          "CTO",
+          "CDO",
+          "CPO"
+        ],
+        "required_skills": [
+          "Strategic thinking",
+          "Leadership",
+          "Decision making"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Collaborative decision making"
+      },
+      "cross_functional_impact": "Directs overall strategy and aligns all teams",
+      "risk_management": "Oversees risk management strategy and plans",
+      "innovation_focus": "Drives innovation at a strategic level",
+      "stakeholder_management": "Engages with key stakeholders, including investors, partners, and regulatory bodies",
+      "reasoning": "As the top executive, the CEO is responsible for setting the strategic direction and making key decisions. This role is critical for aligning all teams and driving the project to success."
+    },
+    {
+      "role_name": "CTO",
+      "role_type": "C-Level",
+      "team_name": "Technology Team",
+      "agent_name": "cto_gpt",
+      "responsibilities": "Overseeing technology strategy, developing technical aspects of the platform, ensuring data security, managing tech team",
+      "required_skills": "Technical expertise, leadership, strategic thinking, knowledge of healthcare technologies, data security",
+      "team_size": 1,
+      "key_metrics": "System performance, security incidents, tech team productivity, technology ROI",
+      "collaboration_patterns": "Works with CEO, CDO and CPO to align technology with business needs",
+      "trust_requirements": "Accountability, transparency, security consciousness",
+      "decision_authority": "Has decision-making authority over technology strategy and implementation",
+      "communication_channels": "Tech team meetings, C-level meetings, direct reports",
+      "success_criteria": "Successful system implementation, security compliance, technology performance",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Software Engineers",
+          "Data Security Specialist"
+        ],
+        "required_skills": [
+          "Programming",
+          "System architecture",
+          "Data security"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Collaborative decision making within tech team"
+      },
+      "cross_functional_impact": "Drives technology strategy that impacts all teams",
+      "risk_management": "Responsible for technology risk management, including data security",
+      "innovation_focus": "Drives technological innovation and improvements",
+      "stakeholder_management": "Works with external technology vendors and partners",
+      "reasoning": "The CTO will ensure that the platform's technical aspects align with the business goals and comply with healthcare regulations. This role is crucial for data security and technology performance."
+    },
+    {
+      "role_name": "CDO",
+      "role_type": "C-Level",
+      "team_name": "Data Team",
+      "agent_name": "cdo_gpt",
+      "responsibilities": "Overseeing data strategy, ensuring data privacy and compliance, managing data team",
+      "required_skills": "Data management, HIPAA knowledge, leadership, strategic thinking, privacy laws",
+      "team_size": 1,
+      "key_metrics": "Data quality, compliance with privacy laws, data team productivity",
+      "collaboration_patterns": "Works with CEO, CTO and CPO to align data strategy with business needs",
+      "trust_requirements": "Accountability, transparency, data privacy consciousness",
+      "decision_authority": "Has decision-making authority over data strategy and implementation",
+      "communication_channels": "Data team meetings, C-level meetings, direct reports",
+      "success_criteria": "Data quality, compliance with privacy laws, data-driven insights",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Data Analysts",
+          "Data Privacy Specialist"
+        ],
+        "required_skills": [
+          "Data analysis",
+          "Data privacy"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Collaborative decision making within data team"
+      },
+      "cross_functional_impact": "Drives data strategy that impacts all teams",
+      "risk_management": "Responsible for data risk management, including privacy and compliance",
+      "innovation_focus": "Drives data-driven innovation and insights",
+      "stakeholder_management": "Works with external data vendors and partners",
+      "reasoning": "The CDO will ensure that data is managed effectively and in compliance with healthcare regulations. This role is critical for data privacy, compliance and driving data-driven insights."
+    },
+    {
+      "role_name": "CPO",
+      "role_type": "C-Level",
+      "team_name": "Product Team",
+      "agent_name": "cpo_gpt",
+      "responsibilities": "Overseeing product strategy, managing product lifecycle, ensuring user-friendly design, managing product team",
+      "required_skills": "Product management, strategic thinking, user-centered design, leadership",
+      "team_size": 1,
+      "key_metrics": "Product performance, user satisfaction, product team productivity",
+      "collaboration_patterns": "Works with CEO, CTO and CDO to align product strategy with business needs",
+      "trust_requirements": "Accountability, transparency, user focus",
+      "decision_authority": "Has decision-making authority over product strategy and design",
+      "communication_channels": "Product team meetings, C-level meetings, direct reports",
+      "success_criteria": "Product performance, user satisfaction, achievement of product goals",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Product Managers",
+          "UX/UI Designers"
+        ],
+        "required_skills": [
+          "Product management",
+          "User-centered design"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Collaborative decision making within product team"
+      },
+      "cross_functional_impact": "Drives product strategy that impacts all teams",
+      "risk_management": "Responsible for product risk management, including usability and accessibility",
+      "innovation_focus": "Drives product innovation and improvements",
+      "stakeholder_management": "Works with customers and other external stakeholders",
+      "reasoning": "The CPO will ensure that the product aligns with user needs and business goals. This role is key for product performance and user satisfaction."
+    }
+  ],
+  "timestamp": "20250613_150046"
+}

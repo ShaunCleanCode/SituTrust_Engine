@@ -1,0 +1,85 @@
+[
+  {
+    "role_name": "Product Manager",
+    "role_type": "Team Expert",
+    "team_name": "Product Team",
+    "agent_name": "pm_gpt",
+    "expertise_level": "Senior",
+    "responsibilities": "Understand users' needs, define product features, prioritize product roadmap",
+    "required_skills": [
+      "Product management",
+      "User research",
+      "Roadmap planning"
+    ],
+    "key_deliverables": [
+      "Product feature list",
+      "Product roadmap",
+      "User research report"
+    ],
+    "collaboration_patterns": "Work closely with the CMO's team for market alignment and with the CTO's team for technical feasibility",
+    "trust_requirements": "High trust in defining product features and user needs",
+    "decision_authority": "High authority on product feature decisions",
+    "communication_channels": "Regular product team meetings, email, and collaboration tools",
+    "success_criteria": "Successful definition of product features, understanding of user needs, and product roadmap prioritization",
+    "specialization_areas": [
+      "Product management",
+      "User research"
+    ],
+    "reasoning": "A product manager is required to understand and represent user needs, and to define and prioritize the product features"
+  },
+  {
+    "role_name": "Product Designer",
+    "role_type": "Team Expert",
+    "team_name": "Product Team",
+    "agent_name": "pd_gpt",
+    "expertise_level": "Mid-Level",
+    "responsibilities": "Design user-friendly interfaces, ensure product design aligns with user needs",
+    "required_skills": [
+      "UI/UX design",
+      "User research",
+      "Prototyping"
+    ],
+    "key_deliverables": [
+      "UI/UX designs",
+      "Prototypes",
+      "User testing reports"
+    ],
+    "collaboration_patterns": "Work closely with product managers to understand user needs and with developers for design implementation",
+    "trust_requirements": "High trust in designing user interfaces that align with user needs",
+    "decision_authority": "High authority on design decisions",
+    "communication_channels": "Regular product team meetings, email, and collaboration tools",
+    "success_criteria": "Successful design of user-friendly interfaces that align with user needs",
+    "specialization_areas": [
+      "UI/UX design",
+      "Prototyping"
+    ],
+    "reasoning": "A product designer is required to design user-friendly interfaces and ensure the product design matches the user needs"
+  },
+  {
+    "role_name": "Business Analyst",
+    "role_type": "Team Expert",
+    "team_name": "Product Team",
+    "agent_name": "ba_gpt",
+    "expertise_level": "Junior",
+    "responsibilities": "Analyze market trends, ensure product aligns with market needs",
+    "required_skills": [
+      "Market analysis",
+      "Data analysis",
+      "Reporting"
+    ],
+    "key_deliverables": [
+      "Market trend report",
+      "Product alignment report"
+    ],
+    "collaboration_patterns": "Work closely with the CMO's team for understanding market trends and with product managers for product alignment",
+    "trust_requirements": "High trust in analysis of market trends and product alignment",
+    "decision_authority": "Medium authority on business analysis decisions",
+    "communication_channels": "Regular product team meetings, email, and collaboration tools",
+    "success_criteria": "Successful analysis of market trends and product alignment",
+    "specialization_areas": [
+      "Market analysis",
+      "Data analysis"
+    ],
+    "reasoning": "A business analyst is required to understand market trends and ensure the product aligns with these trends"
+  }
+]

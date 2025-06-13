@@ -1,10 +1,20 @@
 import os
 import json
 import numpy as np
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
 import matplotlib.pyplot as plt
 import networkx as nx
-from config import TRUST_WEIGHTS, OPENAI_API_KEY, AGENT_MODEL
+import sys
+from pathlib import Path
+import uuid
+
+# Add the project root to Python path
+project_root = str(Path(__file__).parent.parent.parent.parent)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
+from code.experiments.config import TRUST_WEIGHTS, OPENAI_API_KEY, AGENT_MODEL
+
 import openai
 import streamlit as st
 from dotenv import load_dotenv
@@ -517,14 +527,16 @@ class TrustFunctions:
         # Few-shot examples and formula
         prompt = '''
 You are an AI trust analyst. For each agent, you maintain a trust score T_{ij} ∈ [0, 1] toward every peer agent A_j, calculated as:
-T_{ij} = σ(w₁·h_{ij} + w₂·s_{ij} + w₃·c_{ij} + w₄·a_{ij})
-where:
-  h_{ij} = historical collaboration count
-  s_{ij} = success rate of past joint tasks
-  c_{ij} = communication compatibility
-  a_{ij} = domain alignment
-  w₁~w₄ = weights
-  σ = sigmoid
+ ##### 📊 Trust Score Calculation Formula
+                        ```python
+                        T_ij = σ(w₁·c_ij + w₂·p_ij + w₃·i_ij + w₄·t_ij)
+                        
+                        where:
+                        - c_ij = Communication compatibility (30%)
+                        - p_ij = Collaboration patterns (30%)
+                        - i_ij = Cross-functional impact (20%)
+                        - t_ij = Trust requirements (20%)
+                        - σ = Sigmoid function for normalization
 
 **Examples:**
 Shot A-1 — Rule-based
@@ -564,7 +576,7 @@ Return ONLY the JSON object, with no extra text.
         # Insert agent and history data
         agent_list_str = '\n'.join([f"- {a['agent_name']} ({a['role_name']})" for a in agents])
         history_str = '\n'.join([
-            f"{h['agent_a']} ↔ {h['agent_b']}: history={h['history']}, success_rate={h['success_rate']}, comm_compat={h['comm_compat']}, domain_align={h['domain_align']}"
+            f"{h['agent_a']} ↔ {h['agent_b']}: trust_score={h['trust_score']}, collab_compat={h['collab_compat']}, comm_compat={h['comm_compat']}, impact_align={h['impact_align']},trust_align={h['trust_align']}"
             for h in collaboration_history
         ])
         full_prompt = f"""

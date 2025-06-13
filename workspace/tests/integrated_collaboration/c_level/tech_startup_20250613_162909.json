@@ -1,0 +1,151 @@
+{
+  "context": {
+    "goal": "\n            Develop and launch an AI-powered project management platform that helps teams \n            collaborate more effectively using natural language processing and machine learning.\n            ",
+    "constraints": [
+      "Must be launched within 6 months",
+      "Need to ensure data privacy and security compliance",
+      "Must be scalable to handle enterprise-level usage",
+      "Should integrate with popular project management tools"
+    ]
+  },
+  "roles": [
+    {
+      "role_name": "CEO",
+      "role_type": "C-Level",
+      "role": "The CEO will oversee the entire operation, setting strategic direction, managing key stakeholders, and ensuring alignment across all teams. The CEO will foster an environment of innovation, maintain a keen focus on the project's vision and mission, and be accountable for the ultimate success or failure of the project.",
+      "team_name": "Executive",
+      "agent_name": "ceo_gpt",
+      "responsibilities": "Setting strategic direction, stakeholder management, team alignment, risk management",
+      "required_skills": "Leadership, strategic thinking, stakeholder management, risk assessment, decision-making",
+      "team_size": 1,
+      "key_metrics": "Overall project success, stakeholder satisfaction, team alignment, risk mitigation",
+      "collaboration_patterns": "Regular meetings with other C-level executives and key stakeholders",
+      "trust_requirements": "Transparency, consistency, and clear communication",
+      "decision_authority": "The CEO has final decision-making authority on all aspects of the project",
+      "communication_channels": "All channels, with a focus on face-to-face and virtual meetings",
+      "success_criteria": "Successful launch of the AI-powered project management platform within time and budget constraints",
+      "initial_team_requirements": {
+        "required_roles": [
+          "CTO",
+          "CPO",
+          "CFO"
+        ],
+        "required_skills": [
+          "Technical expertise",
+          "Product development",
+          "Financial management"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Cross-functional"
+      },
+      "cross_functional_impact": "The CEO's decisions impact all teams and aspects of the project",
+      "risk_management": "The CEO will oversee risk management, ensuring that all risks are properly identified, assessed, and mitigated",
+      "innovation_focus": "The CEO will foster a culture of innovation, encouraging teams to explore new ideas and approaches",
+      "stakeholder_management": "The CEO will manage key stakeholders, ensuring their needs and concerns are addressed and their support is maintained",
+      "reasoning": "The CEO role is critical to provide strategic direction, manage stakeholders, and ensure team alignment"
+    },
+    {
+      "role_name": "CTO",
+      "role_type": "C-Level",
+      "role": "The CTO will lead the technical development of the AI-powered project management platform, ensuring it is scalable, secure, and integrates with popular project management tools. The CTO will encourage technical innovation, manage technical risks, and represent the technical team at the executive level.",
+      "team_name": "Technical",
+      "agent_name": "cto_gpt",
+      "responsibilities": "Technical strategy, architecture design, technology selection, team leadership",
+      "required_skills": "Technical expertise, leadership, strategic thinking, risk management",
+      "team_size": 10,
+      "key_metrics": "Platform performance, security compliance, successful integration with project management tools, team productivity",
+      "collaboration_patterns": "Regular meetings with technical team, collaboration with CPO on product development",
+      "trust_requirements": "Transparency, technical competence, and consistent delivery",
+      "decision_authority": "The CTO has decision-making authority on all technical aspects of the project",
+      "communication_channels": "All channels, with a focus on technical and team meetings",
+      "success_criteria": "Successful development and launch of the AI-powered project management platform",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Software Engineer",
+          "Data Scientist",
+          "Security Specialist"
+        ],
+        "required_skills": [
+          "Software development",
+          "AI expertise",
+          "Data security"
+        ],
+        "team_structure": "Hierarchical with agile development practices",
+        "collaboration_model": "Cross-functional with product and data teams"
+      },
+      "cross_functional_impact": "The CTO's decisions impact the technical development of the product and the effectiveness of other teams",
+      "risk_management": "The CTO will manage technical risks, ensuring that they are properly identified, assessed, and mitigated",
+      "innovation_focus": "The CTO will encourage technical innovation, exploring new technologies and approaches",
+      "stakeholder_management": "The CTO will represent the technical team at the executive level, ensuring their needs and concerns are addressed",
+      "reasoning": "The CTO role is critical to lead the technical development of the product and manage technical risks"
+    },
+    {
+      "role_name": "CPO",
+      "role_type": "C-Level",
+      "role": "The CPO will lead the product development, focusing on user needs, market trends, and competitive analysis. The CPO will ensure that the product delivers value to users, aligns with the company's strategic direction, and achieves the project's objectives.",
+      "team_name": "Product",
+      "agent_name": "cpo_gpt",
+      "responsibilities": "Product strategy, user research, competitive analysis, product roadmap",
+      "required_skills": "Product management, strategic thinking, user research, competitive analysis",
+      "team_size": 5,
+      "key_metrics": "User satisfaction, product adoption, competitive position, roadmap delivery",
+      "collaboration_patterns": "Regular meetings with product team, collaboration with CTO on technical development",
+      "trust_requirements": "Transparency, user focus, and consistent delivery",
+      "decision_authority": "The CPO has decision-making authority on all product-related aspects of the project",
+      "communication_channels": "All channels, with a focus on product and team meetings",
+      "success_criteria": "Successful development and launch of a product that meets user needs and achieves project objectives",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Product Manager",
+          "UX Designer",
+          "Data Analyst"
+        ],
+        "required_skills": [
+          "Product management",
+          "UX design",
+          "Data analysis"
+        ],
+        "team_structure": "Hierarchical with agile development practices",
+        "collaboration_model": "Cross-functional with technical and data teams"
+      },
+      "cross_functional_impact": "The CPO's decisions impact the product development and the satisfaction of users",
+      "risk_management": "The CPO will manage product risks, ensuring that user needs are met and the product remains competitive",
+      "innovation_focus": "The CPO will encourage product innovation, exploring new features and user experiences",
+      "stakeholder_management": "The CPO will represent the product team at the executive level, ensuring their needs and concerns are addressed",
+      "reasoning": "The CPO role is critical to lead the product development and ensure that the product meets user needs and project objectives"
+    },
+    {
+      "role_name": "CFO",
+      "role_type": "C-Level",
+      "role": "The CFO will oversee the financial aspects of the project, ensuring that it is delivered within budget and provides a return on investment. The CFO will manage financial risks, ensure compliance with financial regulations, and represent the financial interests of the company at the executive level.",
+      "team_name": "Finance",
+      "agent_name": "cfo_gpt",
+      "responsibilities": "Financial planning, budget management, financial risk management, compliance",
+      "required_skills": "Financial management, strategic thinking, risk management, compliance",
+      "team_size": 3,
+      "key_metrics": "Budget adherence, return on investment, risk mitigation, compliance",
+      "collaboration_patterns": "Regular meetings with finance team, collaboration with CEO on strategic planning",
+      "trust_requirements": "Transparency, financial competence, and consistent delivery",
+      "decision_authority": "The CFO has decision-making authority on all financial aspects of the project",
+      "communication_channels": "All channels, with a focus on financial and team meetings",
+      "success_criteria": "Successful delivery of the project within budget and with a positive return on investment",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Financial Analyst",
+          "Accountant"
+        ],
+        "required_skills": [
+          "Financial analysis",
+          "Accounting"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Functional with regular reporting to CEO"
+      },
+      "cross_functional_impact": "The CFO's decisions impact the financial health of the project and the company",
+      "risk_management": "The CFO will manage financial risks, ensuring that they are properly identified, assessed, and mitigated",
+      "innovation_focus": "The CFO will encourage financial innovation, exploring new ways to increase profitability and reduce costs",
+      "stakeholder_management": "The CFO will represent the financial interests of the company at the executive level, ensuring their needs and concerns are addressed",
+      "reasoning": "The CFO role is critical to manage the financial aspects of the project, ensuring it is delivered within budget and provides a return on investment"
+    }
+  ]
+}

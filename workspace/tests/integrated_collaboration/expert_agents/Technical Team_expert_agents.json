@@ -1,0 +1,82 @@
+[
+  {
+    "role_name": "System Architect",
+    "role_type": "Team Expert",
+    "team_name": "Technical Team",
+    "agent_name": "sys_architect_gpt",
+    "expertise_level": "Senior",
+    "responsibilities": "Design the technical architecture of the AI platform, ensure platform scalability",
+    "required_skills": [
+      "System design",
+      "Scalability planning"
+    ],
+    "key_deliverables": [
+      "Technical architecture design",
+      "Scalability plan"
+    ],
+    "collaboration_patterns": "Coordinating with data scientists and AI specialists, aligning with CIO on infrastructure requirements",
+    "trust_requirements": "High trust in architectural decision-making and planning",
+    "decision_authority": "Authority on architectural decisions and scalability planning",
+    "communication_channels": "Technical team meetings, collaboration tools",
+    "success_criteria": "Successful design of platform architecture, effective scalability planning",
+    "specialization_areas": [
+      "System design",
+      "Scalability planning"
+    ],
+    "reasoning": "A system architect is needed to design the platform architecture and ensure it can handle anticipated workloads"
+  },
+  {
+    "role_name": "AI Specialist",
+    "role_type": "Team Expert",
+    "team_name": "Technical Team",
+    "agent_name": "ai_specialist_gpt",
+    "expertise_level": "Senior",
+    "responsibilities": "Design and implement AI features, ensuring they function as intended",
+    "required_skills": [
+      "Machine learning",
+      "Natural Language Processing"
+    ],
+    "key_deliverables": [
+      "AI feature design",
+      "AI feature implementation"
+    ],
+    "collaboration_patterns": "Working with system architects and data scientists, aligning with CPO on feature requirements",
+    "trust_requirements": "High trust in AI-related decision-making and implementation",
+    "decision_authority": "Authority on AI-related decisions and implementation",
+    "communication_channels": "Technical team meetings, collaboration tools",
+    "success_criteria": "Successful design and implementation of AI features",
+    "specialization_areas": [
+      "Machine learning",
+      "Natural Language Processing"
+    ],
+    "reasoning": "An AI specialist is needed to design and implement AI features"
+  },
+  {
+    "role_name": "Data Scientist",
+    "role_type": "Team Expert",
+    "team_name": "Technical Team",
+    "agent_name": "data_scientist_gpt",
+    "expertise_level": "Senior",
+    "responsibilities": "Ensure data privacy and security compliance, contribute to AI feature design",
+    "required_skills": [
+      "Data privacy",
+      "Data security",
+      "Machine learning"
+    ],
+    "key_deliverables": [
+      "Data compliance report",
+      "Contribution to AI feature design"
+    ],
+    "collaboration_patterns": "Working with AI specialists and system architects, aligning with CTO on compliance requirements",
+    "trust_requirements": "High trust in data-related decision-making and compliance",
+    "decision_authority": "Authority on data-related decisions and compliance",
+    "communication_channels": "Technical team meetings, collaboration tools",
+    "success_criteria": "Successful compliance with data privacy and security regulations, effective contributions to AI feature design",
+    "specialization_areas": [
+      "Data privacy",
+      "Data security",
+      "Machine learning"
+    ],
+    "reasoning": "A data scientist is needed to ensure data privacy and security, and to contribute to AI feature design"
+  }
+]

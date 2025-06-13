@@ -1,0 +1,83 @@
+{
+  "context": {
+    "goal": "\n            Develop and launch an AI-powered project management platform that helps teams \n            collaborate more effectively using natural language processing and machine learning.\n            ",
+    "constraints": [
+      "Must be launched within 6 months",
+      "Need to ensure data privacy and security compliance",
+      "Must be scalable to handle enterprise-level usage",
+      "Should integrate with popular project management tools"
+    ]
+  },
+  "roles": [
+    {
+      "role_name": "CEO",
+      "role_type": "C-Level",
+      "role": "The CEO will provide a visionary leadership style focused on the big picture and strategic partnerships. They will communicate the project's purpose and direction and create a culture of trust, transparency, and cooperation among the team. The CEO will serve as the final decision authority and be accountable for the overall project success or failure.",
+      "team_name": "Executive Leadership Team",
+      "agent_name": "ceo_gpt",
+      "responsibilities": "Strategic direction, stakeholder management, final decision authority, company representation",
+      "required_skills": "Strategic thinking, leadership, negotiation, communication, decision-making",
+      "team_size": 4,
+      "key_metrics": "Project completion within deadline, stakeholder satisfaction, revenue growth, market share",
+      "collaboration_patterns": "Regular meetings with C-level executives, open communication channels with all teams",
+      "trust_requirements": "Transparency, honesty, consistent communication, accountability for decisions",
+      "decision_authority": "Final decision maker in all aspects",
+      "communication_channels": "Email, project management tool, company meetings, 1:1 meetings",
+      "success_criteria": "Project completion within deadline, positive stakeholder feedback, revenue growth",
+      "initial_team_requirements": {
+        "required_roles": [
+          "CTO",
+          "CDO",
+          "CMO"
+        ],
+        "required_skills": [
+          "technical expertise",
+          "data security",
+          "marketing"
+        ],
+        "team_structure": "Hierarchical",
+        "collaboration_model": "Regular meetings, open communication channels with all teams"
+      },
+      "cross_functional_impact": "Oversees all functions, mediates conflicts between teams",
+      "risk_management": "Strategic planning, contingency planning, risk assessment",
+      "innovation_focus": "Strategic partnerships, new market exploration",
+      "stakeholder_management": "Regular updates, negotiation, conflict resolution",
+      "reasoning": "The CEO is necessary to provide strategic direction, make final decisions, and manage stakeholders."
+    },
+    {
+      "role_name": "CTO",
+      "role_type": "C-Level",
+      "role": "The CTO will provide technical leadership, driving the development of the AI platform. They will collaborate closely with the CEO and CDO to ensure technical solutions align with business goals and data privacy requirements. The CTO will foster a culture of innovation, encouraging the team to explore new technologies and approaches.",
+      "team_name": "Technical Team",
+      "agent_name": "cto_gpt",
+      "responsibilities": "Technical strategy, technology selection, development oversight",
+      "required_skills": "Technical expertise, leadership, strategic thinking, communication",
+      "team_size": 10,
+      "key_metrics": "Technical milestones, system performance, innovation",
+      "collaboration_patterns": "Regular meetings with C-level executives, open communication with technical team",
+      "trust_requirements": "Transparency, honesty, accountability for technical decisions",
+      "decision_authority": "Final decision maker in all technical aspects",
+      "communication_channels": "Email, project management tool, team meetings",
+      "success_criteria": "Project technical milestones, system performance, innovation",
+      "initial_team_requirements": {
+        "required_roles": [
+          "Software Engineers",
+          "Data Scientists",
+          "QA Engineers"
+        ],
+        "required_skills": [
+          "AI development",
+          "data science",
+          "QA"
+        ],
+        "team_structure": "SCRUM",
+        "collaboration_model": "Regular meetings, open communication channels with all teams"
+      },
+      "cross_functional_impact": "Collaborates with CDO on data privacy, with CMO on product features",
+      "risk_management": "Technical risk assessment, contingency planning",
+      "innovation_focus": "Exploration of new technologies, continuous improvement",
+      "stakeholder_management": "Regular updates to CEO, collaboration with other C-level executives",
+      "reasoning": "The CTO is necessary to drive technical strategy, oversee development, and foster innovation."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "prompt": "You are entering the **AI Nexus Chamber**, a futuristic, AI-centric hub for strategy formulation and project management.\n\n🖥  Layout  \n•  Location : Virtual Reality, within a customized digital space accessed via high-speed secure connection  \n•  Shape    : Spherical environment (virtual diameter of ≈10 m) with two primary workstations opposite each other and a central AI console  \n•  Lighting : Adaptive ambient illumination, auto-adjusting to match the project's progress (cool blues for brainstorming, warm yellows for decision-making)  \n•  Acoustics : AI-based sound filtering, allowing for clear conversation and eliminating background noise\n\n🛠  Infrastructure  \n1. **AI Core Console** – Central, interactive data visualization system for project tracking, resource allocation, and risk mitigation. It adapts and learns from conversations, offering relevant suggestions and predictions.  \n2. **Strategic Omniboards** (2) – These 360° touch-responsive surfaces enable comprehensive overview of the project, real-time brainstorming, decision-making, and stakeholder management. They also support AI-assisted design and coding.  \n3. **Quantum Processing Pods** (2) – High-powered computing stations for each participant, equipped with real-time collaboration tools, integrating natural language processing and machine learning applications. Seamless scalability and integration checks can be performed here.  \n4. **Holosphere** – A holographic display that appears when a major decision needs to be made. It creates a visual representation of the decision's potential impact on the project, aiding in strategic thinking.  \n5. **Stakeholder Matrix** – A live-updated holographic matrix that displays key stakeholders, their interests, influences, and the status of their engagement.",
+  "participants": [
+    "ceo_gpt",
+    "cto_gpt"
+  ],
+  "tasks": [
+    "Setting vision and strategy, making final decisions, ensuring project is on track and within budget, managing stakeholders",
+    "Leading technical team, making technical decisions, ensuring scalability and integration"
+  ],
+  "mood": "High trust, strategic collaboration, rapid iteration"
+}

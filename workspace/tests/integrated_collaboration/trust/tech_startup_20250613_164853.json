@@ -1,0 +1,274 @@
+{
+  "trust_matrix": {
+    "trust_matrix": [
+      {
+        "roles": [
+          "CTO",
+          "CPO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CTO",
+          "CIO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CTO",
+          "CMO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CPO",
+          "CTO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CPO",
+          "CIO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CPO",
+          "CMO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CIO",
+          "CTO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CIO",
+          "CPO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CIO",
+          "CMO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CMO",
+          "CTO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CMO",
+          "CPO"
+        ],
+        "trust_score": 0.85
+      },
+      {
+        "roles": [
+          "CMO",
+          "CIO"
+        ],
+        "trust_score": 0.85
+      }
+    ],
+    "strategy": [
+      {
+        "role_pair": [
+          "CTO",
+          "CPO"
+        ],
+        "strategy": "Increase in joint decision-making sessions to build trust in product and technical decisions"
+      },
+      {
+        "role_pair": [
+          "CTO",
+          "CIO"
+        ],
+        "strategy": "Enhanced collaboration and communication on security and IT-related decisions"
+      },
+      {
+        "role_pair": [
+          "CTO",
+          "CMO"
+        ],
+        "strategy": "Improve trust through more interactions and understanding of market strategies and technical feasibility"
+      },
+      {
+        "role_pair": [
+          "CPO",
+          "CTO"
+        ],
+        "strategy": "Increased alignment meetings for product vision and technical feasibility"
+      },
+      {
+        "role_pair": [
+          "CPO",
+          "CIO"
+        ],
+        "strategy": "Strengthen trust through synchronization of product integrations and IT infrastructure"
+      },
+      {
+        "role_pair": [
+          "CPO",
+          "CMO"
+        ],
+        "strategy": "Enhance trust by aligning product features with market trends and customer needs"
+      },
+      {
+        "role_pair": [
+          "CIO",
+          "CTO"
+        ],
+        "strategy": "Increase in joint decision-making sessions to strengthen trust in IT and technical decisions"
+      },
+      {
+        "role_pair": [
+          "CIO",
+          "CPO"
+        ],
+        "strategy": "Improve trust through alignment on IT support for product features and integrations"
+      },
+      {
+        "role_pair": [
+          "CIO",
+          "CMO"
+        ],
+        "strategy": "Strengthen trust by aligning on IT support for marketing campaigns and customer acquisition strategies"
+      },
+      {
+        "role_pair": [
+          "CMO",
+          "CTO"
+        ],
+        "strategy": "Increase collaboration for aligning market strategies with technical feasibility"
+      },
+      {
+        "role_pair": [
+          "CMO",
+          "CPO"
+        ],
+        "strategy": "Strengthen trust through alignment on customer needs and product features"
+      },
+      {
+        "role_pair": [
+          "CMO",
+          "CIO"
+        ],
+        "strategy": "Improve trust through better understanding and alignment on IT support for marketing strategies"
+      }
+    ]
+  },
+  "collaboration_history": [
+    {
+      "agent_a": "cto_gpt",
+      "agent_b": "cpo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cto_gpt",
+      "agent_b": "cio_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cto_gpt",
+      "agent_b": "cmo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cpo_gpt",
+      "agent_b": "cto_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cpo_gpt",
+      "agent_b": "cio_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cpo_gpt",
+      "agent_b": "cmo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cio_gpt",
+      "agent_b": "cto_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cio_gpt",
+      "agent_b": "cpo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cio_gpt",
+      "agent_b": "cmo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cmo_gpt",
+      "agent_b": "cto_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cmo_gpt",
+      "agent_b": "cpo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cmo_gpt",
+      "agent_b": "cio_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    }
+  ]
+}

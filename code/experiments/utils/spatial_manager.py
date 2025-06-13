@@ -1,6 +1,15 @@
 from typing import Dict, List
 import uuid
-from config import ROOM_TEMPLATES, AGENT_MODEL, OPENAI_API_KEY
+import sys
+from pathlib import Path
+
+# Add the project root to Python path
+project_root = str(Path(__file__).parent.parent.parent.parent)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
+from code.experiments.config import ROOM_TEMPLATES, AGENT_MODEL, OPENAI_API_KEY
+
 import openai
 import json
 from datetime import datetime

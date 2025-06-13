@@ -4,7 +4,16 @@ import os
 from datetime import datetime
 import streamlit as st
 import openai
-from config import OPENAI_API_KEY, AGENT_MODEL
+import sys
+from pathlib import Path
+
+# Add the project root to Python path
+project_root = str(Path(__file__).parent.parent.parent.parent)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
+from code.experiments.config import OPENAI_API_KEY, AGENT_MODEL
+
 import numpy as np
 import uuid
 import re

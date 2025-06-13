@@ -1,0 +1,38 @@
+{
+  "trust_matrix": {
+    "trust_matrix": {
+      "ceo_gpt": {
+        "cto_gpt": 0.85
+      },
+      "cto_gpt": {
+        "ceo_gpt": 0.85
+      }
+    },
+    "strategy": {
+      "ceo_gpt": {
+        "cto_gpt": "request evidence"
+      },
+      "cto_gpt": {
+        "ceo_gpt": "request evidence"
+      }
+    }
+  },
+  "collaboration_history": [
+    {
+      "agent_a": "ceo_gpt",
+      "agent_b": "cto_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    },
+    {
+      "agent_a": "cto_gpt",
+      "agent_b": "ceo_gpt",
+      "history": 2,
+      "success_rate": 0.8,
+      "comm_compat": 0.9,
+      "domain_align": 0.85
+    }
+  ]
+}
