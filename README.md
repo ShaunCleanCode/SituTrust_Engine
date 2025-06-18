@@ -30,8 +30,8 @@ SituTrust_Engine/
 ## Setup & Usage
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/SituTrust_Engine.git
-   cd SituTrust_Engine
+   git clone https://github.com/ShaunCleanCode/situtrust-engine.git
+   cd situtrust-engine
    ```
 2. **Create and activate a virtual environment**
    ```bash
