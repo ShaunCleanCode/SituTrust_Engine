@@ -101,6 +101,17 @@ class RoleGenerator:
                         Your task is to analyze project requirements and determine the most appropriate C-level roles.
                         Think step by step about what roles are truly necessary for the project's success.
                         Consider both traditional and specialized roles based on the specific context."""
+                        
+                    },
+                    {
+                        "role": "system", 
+                        "content": """CRITICAL INSTRUCTIONS:
+- Return ONLY a valid JSON array
+- Do not include any explanatory text before or after the JSON
+- Ensure all JSON syntax is correct
+- Include all required fields for each role
+"""
+                        
                     },
                     {"role": "user", "content": prompt}
                 ],
@@ -202,7 +213,7 @@ class RoleGenerator:
            For each executive, include a field `"role"` that goes beyond the titleto describe:
 
 -  **Team Influence**: How do they inspire and direct teams? What kinds of cross-functional impact do they create?
--  **Core Mission**: What strategic objectives do they own? How does this tie to the company’s success?
+-  **Core Mission**: What strategic objectives do they own? How does this tie to the company's success?
 -  **Accountability**: What are their personal success metrics and failure responsibilities?
 -  **Behavioral Patterns**: How do they communicate, escalate issues, negotiate alignment, and handle conflict?
 -  **Structural Role**: Where do they sit in the hierarchy? Whom do they delegate to?
@@ -216,7 +227,7 @@ Make this field **rich, narrative, and actionable**, written like an onboarding 
                 "role_type": "C-Level",
                 "role": "string",  // Fully articulated narrative as described above
                 "team_name": "string",  // e.g., "Technical Team", "Product Team", "Marketing Team"
-                "agent_name": "string", // e.g., "cto_gpt", "cpo_gpt", "cmo_gpt"
+                 "agent_name": "string", //  e.g.,first_name(role_name) Shaun(CTO) , Eric(CPO) ,Chris(CRO),Choi(CDO)
                 "responsibilities": "string",  // Detailed list of responsibilities
                 "required_skills": "string",   // Comprehensive list of required skills
                 "team_size": "number",
@@ -264,51 +275,113 @@ Make this field **rich, narrative, and actionable**, written like an onboarding 
         - Focus on creating a cohesive leadership team that can work together effectively."""
 
     def _generate_team_roles_prompt(self, c_level_role: Dict, context: Dict) -> str:
-        """Generate a dynamic prompt for team roles under a specific C-level executive."""
+        """Generate a dynamic prompt for team roles under a specific C-level executive with Chain of Thought reasoning."""
         return f"""
-        Based on the following C-level role and project context, generate a comprehensive set of team roles.
-        Focus on the specific team members needed under this C-level executive.
+        You are an expert in team design and organizational structure. Your task is to analyze the C-level executive's requirements and determine the most appropriate team roles needed under their leadership.
 
-        C-Level Role: {json.dumps(c_level_role, indent=2)}
+        Let's think through this step by step:
+
+        1. First, analyze the C-level executive's role and project context:
+        C-Level Executive: {json.dumps(c_level_role, indent=2)}
         Project Goal: {context['goal']}
         Project Constraints: {context['constraints']}
 
-        Generate a JSON array of team roles with the following structure:
+        2. Consider the following aspects for team design:
+           - What specific functional areas does this C-level executive oversee?
+           - What specialized expertise is required within their team?
+           - What operational roles are essential for their success?
+           - What technical or domain-specific skills are needed?
+           - What unique challenges or opportunities exist in their domain?
+           - What are the critical success factors for their team?
+           - What are the potential risks and how can they be mitigated?
+           - How does their team interact with other departments?
+
+        3. For each potential team role, consider:
+           - Is this role truly necessary for the team's success?
+           - What unique value does this role bring to the C-level executive?
+           - How does this role interact with other team members?
+           - What specific challenges will this role address?
+           - What are the key decision-making authorities within the team?
+           - What are the critical dependencies with other roles?
+           - How will this role contribute to building trust within the team?
+           - What are the specific KPIs for measuring individual success?
+           - How does this role support the C-level executive's objectives?
+           - What technical or domain expertise is required?
+           - How does this role fit into the overall team structure?
+
+        4. ROLE FIELD GUIDELINES (CRITICAL)
+           For each team member, include a field `"role"` that goes beyond the title to describe:
+
+-  **Team Contribution**: How do they contribute to the team's success? What specific value do they bring?
+-  **Core Mission**: What specific objectives do they own? How does this tie to the C-level executive's success?
+-  **Accountability**: What are their personal success metrics and failure responsibilities?
+-  **Behavioral Patterns**: How do they communicate, collaborate, escalate issues, and handle conflicts within the team?
+-  **Structural Position**: Where do they sit in the team hierarchy? Whom do they report to and delegate to?
+-  **Technical Expertise**: What specific technical or domain skills do they bring?
+-  **Collaboration Style**: How do they work with other team members and cross-functional partners?
+
+Make this field **rich, narrative, and actionable**, written like an onboarding briefing for a human team member. This field will be used to train aligned role-specific AI agents, so clarity is critical.
+
+        5. Based on this analysis, generate a JSON array of team roles with the following structure:
         [
             {{
-                "role_name": "string",  // e.g., "Senior Developer", "Product Manager", "Marketing Specialist"
+                "role_name": "string",  // e.g., "Senior Frontend Developer", "Data Analyst", "Growth Marketer"
                 "role_type": "Team",
+                "role": "string",  // Fully articulated narrative as described above
                 "team_name": "{c_level_role['team_name']}",
-                "agent_name": "string", // e.g., "senior_dev_gpt", "pm_gpt", "marketing_spec_gpt"
-                "responsibilities": "string",
-                "required_skills": "string",
+                "agent_name": "string", // format: first_name(role_name), e.g.) David(ML OPS) , Andrew(Senior Frontend Developer) ,Erin (AI Analyst),Hailey(Growth Marketer)
+                "responsibilities": "string",  // Detailed list of responsibilities
+                "required_skills": "string",   // Comprehensive list of required skills
                 "team_size": "number",
-                "key_metrics": "string",
-                "collaboration_patterns": "string",
-                "trust_requirements": "string",
-                "decision_authority": "string",
-                "communication_channels": "string",
-                "success_criteria": "string",
+                "key_metrics": "string",       // Specific KPIs and success metrics
+                "collaboration_patterns": "string",  // Detailed collaboration strategies
+                "trust_requirements": "string",      // Trust-building strategies within team
+                "decision_authority": "string",      // Clear decision-making boundaries
+                "communication_channels": "string",  // Communication protocols
+                "success_criteria": "string",        // Specific success criteria
                 "initial_team_requirements": {{
                     "required_roles": ["string"],
                     "required_skills": ["string"],
                     "team_structure": "string",
                     "collaboration_model": "string"
-                }}
+                }},
+                "technical_expertise": "string",     // Specific technical or domain expertise
+                "team_dynamics": "string",           // How they fit into team dynamics
+                "growth_potential": "string",        // Career growth and development areas
+                "cross_team_collaboration": "string", // Collaboration with other teams
+                "problem_solving_approach": "string", // How they approach and solve problems
+                "innovation_contribution": "string",  // How they contribute to innovation
+                "quality_standards": "string",       // Quality standards and expectations
+                "mentoring_capabilities": "string",  // Mentoring and knowledge sharing
+                "reasoning": "string"  // Explain why this role is necessary and how it contributes to the team
             }}
         ]
 
         Ensure the response includes:
         1. ONLY team-level roles with 'role_type' set to 'Team'
-        2. Roles that align with the C-level executive's team requirements
-        3. Clear role definitions and responsibilities
-        4. Specific collaboration patterns and communication channels
+        2. A clearly written 'role' field for each team member, describing their mission, contribution style, behavioral signature, and team influence. THIS FIELD IS MANDATORY.
+        3. Clear role definitions and responsibilities that align with the C-level executive's requirements
+        4. Specific technical expertise and domain knowledge requirements
+        5. Detailed collaboration patterns and communication channels within the team
+        6. Trust-building strategies within the team context
+        7. Specific KPIs and success metrics for individual performance
+        8. Team dynamics and cross-functional collaboration approaches
+        9. Problem-solving and innovation contribution methods
+        10. Quality standards and mentoring capabilities
+        11. Growth potential and development areas
+        12. Reasoning for each role's necessity within the team
 
-        IMPORTANT: Return ONLY the JSON array, with no additional text or explanation.
-        The response must be valid JSON that can be parsed directly.
+        IMPORTANT:
+        - Return ONLY the JSON array, with no additional text or explanation.
+        - The 'role' field is REQUIRED for each entry. Do not skip or leave this field vague or generic.
+        - The response must be valid JSON that can be parsed directly.
+        - Include a 'reasoning' field for each role explaining its necessity within the team.
+        - Consider both traditional team roles and any specialized roles needed for this specific C-level executive's domain.
+        - Ensure each role has clear boundaries and responsibilities to avoid overlap within the team.
+        - Focus on creating a cohesive team that can work together effectively under the C-level executive's leadership.
+        - Consider the C-level executive's specific domain (Technical, Marketing, Finance, etc.) when designing team roles.
+        - Ensure roles complement each other and cover all necessary functions within the team's scope.
         """
-
-    
 
     def generate_team_roles(self, c_level_role: Dict, goal: str, constraints: str) -> Optional[List[Dict]]:
         """Generate team roles for a specific C-level executive."""
@@ -396,42 +469,7 @@ Make this field **rich, narrative, and actionable**, written like an onboarding 
         """Get the history of responses."""
         return self.response_history
 
-    def generate_team_agents(self, team_requirements: Dict, c_level_decisions: Dict) -> List[Dict]:
-        """Generate team agents based on requirements and C-level decisions."""
-        try:
-            # Generate prompt for team agent creation
-            prompt = f"""
-            Create specialized AI agents for the team based on:
-            Team Requirements: {json.dumps(team_requirements, indent=2)}
-            C-Level Decisions: {json.dumps(c_level_decisions, indent=2)}
-            
-            Generate a JSON array of team members with:
-            1. Role name
-            2. Agent name
-            3. Responsibilities
-            4. Required skills
-            5. Collaboration patterns
-            
-            Return ONLY the JSON array, with no additional text or explanation.
-            """
-            
-            # Get team agents from GPT
-            response = self.openai_client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": "You are a team structure designer. Always respond with valid JSON only."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.7
-            )
-            
-            # Clean and parse response
-            cleaned_response = self._clean_json_response(response.choices[0].message.content)
-            return json.loads(cleaned_response)
-            
-        except Exception as e:
-            st.error(f"Failed to generate team agents: {str(e)}")
-            return []
+    
 
     def update_roles(self, current_roles: List[Dict], goal: str, constraints: List[str], 
                     meeting_progress: Dict = None) -> List[Dict]:
@@ -569,11 +607,11 @@ Make this field **rich, narrative, and actionable**, written like an onboarding 
                - What specific deliverables or outcomes are expected?
             6. For each expert agent, include a detailed "role" field that describes:
 
-                - **Mission Focus**: What is the agent’s strategic mission within the team? What higher-order goal do they own?
+                - **Mission Focus**: What is the agent's strategic mission within the team? What higher-order goal do they own?
                 - **Operational Influence**: How do they affect workflows, decisions, and other team members?
                 - **Behavioral Profile**: How do they communicate, negotiate, escalate, or resolve conflicts?
                 - **Collaboration Mode**: Do they lead, advise, validate, or execute? What rituals (e.g., syncs, code reviews) do they drive?
-                - **Alignment Role**: How do they ensure coherence with the C-level’s objective? What “guardrails” do they enforce?
+                - **Alignment Role**: How do they ensure coherence with the C-level's objective? What "guardrails" do they enforce?
                 - **Knowledge Anchor**: What specific subject-matter knowledge do they bring? What past experience backs it?
 
                 The "role" field should be rich, written like an onboarding manual for a real human agent. It will be used to simulate realistic autonomous behavior in multi-agent workflows.   

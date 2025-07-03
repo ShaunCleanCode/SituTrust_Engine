@@ -1,0 +1,22 @@
+{
+  "task_id": "task_0",
+  "description": "Implement core features",
+  "input_data": {
+    "features": [
+      "auth",
+      "api"
+    ]
+  },
+  "output_format": "code",
+  "dependencies": [],
+  "deadline": null,
+  "status": "completed",
+  "completion_time": "2025-06-24T15:34:23.714918",
+  "artifacts_generated": [
+    "task_id",
+    "status",
+    "result",
+    "timestamp"
+  ],
+  "team_name": "Technical Team"
+}

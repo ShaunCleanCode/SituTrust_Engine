@@ -599,8 +599,8 @@ Each C-Level participant must:
 - Refer to *trust dynamics* naturally in their speech (e.g., "Given our alignment on...", "I'm cautious because...")
 role_emojis_map = {{
     "CEO": "🙋🏻‍♂️",
-    "cto_gpt": "💻",
-    "cfo_gpt": "😌",
+    "CTO": "💻",
+    "CFO": "😌",
     "COO": "🧐",
     "CMO": "😼",
     "CHRO": "🧑🏼‍🦲",
@@ -612,8 +612,8 @@ role_emojis_map = {{
 📝 **Expected Format**:
 - Use realistic conversation format:
 ```markdown
-**emoji cto_gpt**: Here's my view based on our infrastructure plans...
-**emoji cpo_gpt**: I agree, especially because our trust level supports this coordination.
+**emoji CTO**: Here's my view based on our infrastructure plans...
+**emoji CPO**: I agree, especially because our trust level supports this coordination.
 ```
 """
                             

@@ -642,7 +642,7 @@ class CollaborationFlow:
                 )
                 
                 # Save result
-                self._save_task_result(agent_name, task, result)
+                self._save_enhanced_task_result(agent_name, task, result)
                 
                 agent_results.append(result)
             
@@ -741,30 +741,166 @@ Please provide your solution.
             'timestamp': datetime.now().isoformat()
         }
 
-    def _save_task_result(self, agent_name: str, task: Dict, result: Dict) -> None:
-        """Save task result to appropriate file."""
+    def _save_enhanced_task_result(self, agent_name: str, task: Dict, result: Dict) -> None:
+        """Enhanced task result saving with multiple output formats."""
         task_dir = os.path.join('workspace', 'agents', agent_name, 'tasks', task['task_id'])
         
-        # Determine file extension based on output format
-        ext = {
-            'text': '.txt',
-            'markdown': '.md',
-            'python': '.py',
-            'json': '.json'
-        }.get(task['output_format'], '.txt')
+        # Save main result as JSON
+        with open(os.path.join(task_dir, 'result.json'), 'w', encoding='utf-8') as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
         
-        # Save result
-        with open(os.path.join(task_dir, f'result{ext}'), 'w') as f:
-            if ext == '.json':
-                json.dump(result, f, indent=2)
-            else:
-                f.write(result['result'])
+        # Save markdown report if available
+        if 'report' in result:
+            with open(os.path.join(task_dir, 'analysis_report.md'), 'w', encoding='utf-8') as f:
+                f.write(result['report'])
+        
+        # Save code files if available
+        if 'code' in result:
+            with open(os.path.join(task_dir, 'analysis_code.py'), 'w', encoding='utf-8') as f:
+                f.write(result['code'])
+        
+        # Save visualizations if available
+        if 'visualizations' in result:
+            viz_dir = os.path.join(task_dir, 'visualizations')
+            os.makedirs(viz_dir, exist_ok=True)
+            for viz_name, viz_data in result['visualizations'].items():
+                if isinstance(viz_data, str) and viz_data.startswith('data:image'):
+                    # Handle base64 encoded images
+                    import base64
+                    image_data = viz_data.split(',')[1]
+                    image_bytes = base64.b64decode(image_data)
+                    with open(os.path.join(viz_dir, f'{viz_name}.png'), 'wb') as f:
+                        f.write(image_bytes)
+                elif isinstance(viz_data, str):
+                    # Handle SVG or other text-based visualizations
+                    ext = '.svg' if '<svg' in viz_data else '.txt'
+                    with open(os.path.join(viz_dir, f'{viz_name}{ext}'), 'w', encoding='utf-8') as f:
+                        f.write(viz_data)
+        
+        # Save data files if available
+        if 'data' in result:
+            data_dir = os.path.join(task_dir, 'data')
+            os.makedirs(data_dir, exist_ok=True)
+            for data_name, data_content in result['data'].items():
+                if isinstance(data_content, dict):
+                    with open(os.path.join(data_dir, f'{data_name}.json'), 'w', encoding='utf-8') as f:
+                        json.dump(data_content, f, indent=2, ensure_ascii=False)
+                elif isinstance(data_content, str):
+                    with open(os.path.join(data_dir, f'{data_name}.txt'), 'w', encoding='utf-8') as f:
+                        f.write(data_content)
+        
+        # Save summary document
+        summary = self._generate_task_summary(task, result)
+        with open(os.path.join(task_dir, 'task_summary.md'), 'w', encoding='utf-8') as f:
+            f.write(summary)
         
         # Update task metadata
         task['status'] = 'completed'
         task['completion_time'] = result['timestamp']
-        with open(os.path.join(task_dir, 'task_meta.json'), 'w') as f:
-            json.dump(task, f, indent=2)
+        task['artifacts_generated'] = list(result.keys())
+        with open(os.path.join(task_dir, 'task_meta.json'), 'w', encoding='utf-8') as f:
+            json.dump(task, f, indent=2, ensure_ascii=False)
+    
+    def _generate_task_summary(self, task: Dict, result: Dict) -> str:
+        """Generate a summary document for the completed task."""
+        summary = f"""# Task Summary: {task['task_id']}
+
+## Task Information
+- **Task ID**: {task['task_id']}
+- **Description**: {task['description']}
+- **Assigned To**: {task.get('assigned_to', 'Unknown')}
+- **Status**: {result.get('status', 'Unknown')}
+- **Completion Time**: {result.get('timestamp', 'Unknown')}
+
+## Input Data
+```json
+{json.dumps(task.get('input_data', {}), indent=2)}
+```
+
+## Output Summary
+- **Result Type**: {type(result.get('result', {})).__name__}
+- **Generated Artifacts**: {', '.join(result.keys())}
+
+## Key Findings
+"""
+        
+        # Extract key findings from result
+        if 'result' in result and isinstance(result['result'], dict):
+            if 'key_findings' in result['result']:
+                for finding in result['result']['key_findings']:
+                    summary += f"- {finding}\n"
+            elif 'summary' in result['result']:
+                summary += f"{result['result']['summary']}\n"
+        
+        summary += f"""
+## Files Generated
+"""
+        
+        # List generated files
+        if 'report' in result:
+            summary += "- `analysis_report.md` - Detailed analysis report\n"
+        if 'code' in result:
+            summary += "- `analysis_code.py` - Analysis code and scripts\n"
+        if 'visualizations' in result:
+            summary += "- `visualizations/` - Generated charts and graphs\n"
+        if 'data' in result:
+            summary += "- `data/` - Processed data files\n"
+        
+        summary += f"""
+## Metadata
+- **Task Duration**: {self._calculate_task_duration(task, result)}
+- **Output Quality**: {self._assess_output_quality(result)}
+- **Trust Score**: {result.get('agent_metadata', {}).get('trust_score', 'N/A')}
+
+---
+*Generated by SituTrust Engine on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*
+"""
+        
+        return summary
+    
+    def _calculate_task_duration(self, task: Dict, result: Dict) -> str:
+        """Calculate the duration of task execution."""
+        try:
+            start_time = task.get('start_time', result.get('timestamp'))
+            end_time = result.get('timestamp')
+            
+            if start_time and end_time:
+                start_dt = datetime.fromisoformat(start_time.replace('Z', '+00:00'))
+                end_dt = datetime.fromisoformat(end_time.replace('Z', '+00:00'))
+                duration = end_dt - start_dt
+                return str(duration)
+            else:
+                return "Unknown"
+        except:
+            return "Unknown"
+    
+    def _assess_output_quality(self, result: Dict) -> str:
+        """Assess the quality of the task output."""
+        quality_score = 0
+        
+        # Check for comprehensive result
+        if 'result' in result and isinstance(result['result'], dict):
+            quality_score += 1
+        
+        # Check for additional artifacts
+        if 'report' in result:
+            quality_score += 1
+        if 'code' in result:
+            quality_score += 1
+        if 'visualizations' in result:
+            quality_score += 1
+        if 'data' in result:
+            quality_score += 1
+        
+        # Quality assessment based on score
+        if quality_score >= 4:
+            return "Excellent"
+        elif quality_score >= 3:
+            return "Good"
+        elif quality_score >= 2:
+            return "Fair"
+        else:
+            return "Basic"
 
     def _format_previous_interactions(self) -> str:
         """Format previous meeting interactions for context."""
